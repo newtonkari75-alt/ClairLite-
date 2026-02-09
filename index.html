@@ -74,7 +74,7 @@
 
     <div class="w-full lg:max-w-[1440px] mx-auto bg-brand-white shadow-2xl relative overflow-hidden">
         
-        <!-- TOP ANNOUNCEMENT BAR (Updated #E9E9E9) -->
+        <!-- TOP ANNOUNCEMENT BAR -->
         <div class="bg-brand-gray py-2 px-4 border-b border-gray-200">
             <div class="flex justify-center items-center gap-4 md:gap-12">
                 <div class="flex items-center gap-2">
@@ -98,7 +98,7 @@
             </button>
         </header>
 
-        <!-- FLASH SALE BANNER (Black) -->
+        <!-- FLASH SALE BANNER -->
         <div class="bg-black text-white text-center py-2.5 px-4 border-b border-white/10">
             <span class="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.2em]">
                 FLASH SALE: 70% DISCOUNT UNTIL <span id="current-date" class="underline decoration-yellow-400">TODAY</span>
@@ -177,7 +177,7 @@
         <div class="bg-brand-blue py-6 px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-white text-center">
             <div class="flex flex-col items-center gap-2">
                 <i class="fas fa-virus-slash text-xl opacity-50"></i>
-                <span class="text-[9px] font-bold uppercase tracking-widest">Keills Germs & Allergens</span>
+                <span class="text-[9px] font-bold uppercase tracking-widest">Kills Germs & Allergens</span>
             </div>
             <div class="flex flex-col items-center gap-2">
                 <i class="fas fa-spray-can text-xl opacity-50"></i>
@@ -193,35 +193,40 @@
             </div>
         </div>
 
-        <!-- PROBLEM & SOLUTION SECTION -->
+        <!-- UPDATED PROBLEM & SOLUTION SECTION -->
         <section class="py-20 px-6 bg-brand-gray/30">
             <div class="max-w-4xl mx-auto text-center">
                 <h2 class="text-3xl md:text-5xl font-black mb-16 tracking-tight text-brand-blue">Professional Room Sanitization</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div class="bg-white p-8 rounded-[2rem] shadow-sm text-left border border-gray-100">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+                    <div class="bg-white p-8 rounded-[2rem] shadow-sm text-left border border-gray-100 benefit-card">
                         <div class="text-red-500 font-black mb-4 uppercase tracking-widest text-xs">The Problem</div>
                         <h3 class="text-xl font-bold mb-4">Hidden Pathogens</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed italic">Hidden germs collect on worktops, furniture, switches and electronics—even after manual cleaning.</p>
+                        <p class="text-gray-500 text-sm leading-relaxed">Hidden germs accumulate on countertops, furniture, switches, and electronics, even after manual cleaning.</p>
                     </div>
-                    <div class="bg-white p-8 rounded-[2rem] shadow-sm text-left border-2 border-brand-blue">
+                    <div class="bg-white p-8 rounded-[2rem] shadow-sm text-left border-2 border-brand-blue benefit-card">
                         <div class="text-brand-blue font-black mb-4 uppercase tracking-widest text-xs">The Solution</div>
                         <h3 class="text-xl font-bold mb-4">ClairLite™ Power</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed">Powerful UV-C light reduces microorganisms on exposed surfaces without chemicals, residues, or manual effort. Simply turn it on and leave—ClairLite does the rest.</p>
+                        <p class="text-gray-500 text-sm leading-relaxed">Powerful UV-C light reduces microorganisms on exposed surfaces without chemicals, residues, or manual effort. Simply turn it on and let it work — ClairLite does the rest.</p>
                     </div>
                 </div>
-                
-                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="flex flex-col items-center">
-                        <div class="w-12 h-12 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold mb-4">1</div>
-                        <p class="text-sm font-bold">Place in Room</p>
+
+                <!-- 1-2-3 Steps -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="flex flex-col items-center p-6 bg-white rounded-3xl border border-gray-100 shadow-sm benefit-card">
+                        <div class="w-14 h-14 bg-brand-blue text-white rounded-full flex items-center justify-center font-black text-xl mb-6 shadow-lg shadow-brand-blue/20">1</div>
+                        <h4 class="text-lg font-black text-brand-blue mb-2 uppercase tracking-tighter">Place in Room</h4>
+                        <p class="text-gray-400 text-sm font-medium">Position the device centrally.</p>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <div class="w-12 h-12 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold mb-4">2</div>
-                        <p class="text-sm font-bold">Exit & Activate</p>
+                    <div class="flex flex-col items-center p-6 bg-white rounded-3xl border border-gray-100 shadow-sm benefit-card">
+                        <div class="w-14 h-14 bg-brand-blue text-white rounded-full flex items-center justify-center font-black text-xl mb-6 shadow-lg shadow-brand-blue/20">2</div>
+                        <h4 class="text-lg font-black text-brand-blue mb-2 uppercase tracking-tighter">Exit & Activate</h4>
+                        <p class="text-gray-400 text-sm font-medium">Leave the room and use remote.</p>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <div class="w-12 h-12 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold mb-4">3</div>
-                        <p class="text-sm font-bold">Return to Safe Air</p>
+                    <div class="flex flex-col items-center p-6 bg-white rounded-3xl border border-gray-100 shadow-sm benefit-card">
+                        <div class="w-14 h-14 bg-brand-blue text-white rounded-full flex items-center justify-center font-black text-xl mb-6 shadow-lg shadow-brand-blue/20">3</div>
+                        <h4 class="text-lg font-black text-brand-blue mb-2 uppercase tracking-tighter">Return to Safe Air</h4>
+                        <p class="text-gray-400 text-sm font-medium">Enjoy a clinically clean space.</p>
                     </div>
                 </div>
             </div>
@@ -337,7 +342,7 @@
                     <i class="fas fa-times text-xl"></i>
                 </button>
                 <div id="modal-content" class="p-10 overflow-y-auto text-sm text-gray-700 leading-relaxed">
-                    <!-- Content injected here -->
+                    <!-- Dynamic Content -->
                 </div>
             </div>
         </div>
@@ -346,19 +351,19 @@
 
     <!-- SCRIPTS -->
     <script>
-        // Current Date
+        // Data Atual
         (function() {
             const d = new Date();
             const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
             document.getElementById('current-date').innerText = months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
         })();
 
-        // Scroll Logic
+        // Scroll
         function scrollToSelector() {
             document.getElementById('cta-options').scrollIntoView({ behavior: 'smooth' });
         }
 
-        // Modal Logic
+        // Modais
         const modalData = {
             'privacy': `<h2 class="text-2xl font-black mb-6">Privacy Policy</h2><p>Your privacy is important to us. We use your data strictly for order fulfillment and internal logistics tracking...</p>`,
             'terms': `<h2 class="text-2xl font-black mb-6">Terms of Service</h2><p>By purchasing ClairLite™, you agree to our standard terms of sale and safety guidelines for UV-C usage...</p>`,
