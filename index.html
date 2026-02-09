@@ -23,7 +23,7 @@
     <!-- ============================================== -->
     <!-- 2. SEO META TAGS -->
     <!-- ============================================== -->
-    <title>ClairLite™ | Advanced Home UV-C Sanitization Technology (70% OFF)</title>
+    <title>ClairLite™ | Professional Home UV-C Sanitization Technology (70% OFF)</title>
     <meta name="description" content="Sanitize every inch of your home in minutes with ClairLite™. Kills 99.99% of germs, bacteria, and allergens using 100% chemical-free UV-C light technology.">
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -73,7 +73,7 @@
             box-shadow: 0 20px 40px rgba(1, 36, 104, 0.12);
         }
 
-        /* Clean translation-ready layout */
+        /* Clean translation-ready modal layout */
         .modal-content-text h2 { font-size: 1.5rem; font-weight: 900; margin-bottom: 1.5rem; color: #012468; text-transform: uppercase; }
         .modal-content-text h3 { font-size: 1.125rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #111827; }
         .modal-content-text p { margin-bottom: 1rem; color: #4B5563; line-height: 1.6; }
@@ -101,7 +101,7 @@
         </div>
 
         <!-- HEADER -->
-        <header class="py-5 px-6 bg-brand-blue flex justify-center items-center sticky top-0 z-50 shadow-md">
+        <header class="py-5 px-6 bg-brand-blue flex justify-center items-center sticky top-0 z-50">
             <img src="images/clearlite-logo.svg" alt="ClairLite™ Logo" class="h-8 md:h-10 logo-light" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
             <span class="hidden text-white font-black text-2xl tracking-tighter">CLAIRLITE™</span>
         </header>
@@ -113,7 +113,7 @@
             </span>
         </div>
 
-        <!-- HERO SECTION -->
+        <!-- HERO SECTION (SESSION 1) -->
         <section class="px-6 py-12 lg:px-24 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center bg-white">
             <div class="order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left animate-fade-in-up">
                 <div class="flex items-center gap-2 mb-8 bg-brand-gray/50 px-4 py-1.5 rounded-full">
@@ -177,8 +177,8 @@
 
             <div class="order-1 lg:order-2 flex justify-center">
                 <div class="relative w-full max-w-lg">
-                    <!-- Premium Video Frame -->
-                    <div class="rounded-[2.5rem] overflow-hidden shadow-2xl border-[12px] border-brand-gray">
+                    <!-- Clean Video Frame (No Border/Shadow) -->
+                    <div class="rounded-3xl overflow-hidden">
                         <video autoplay muted loop playsinline class="w-full h-auto object-cover" poster="images/clearlite-logo.svg">
                             <source src="images/clearlite.mp4" type="video/mp4">
                         </video>
@@ -187,7 +187,7 @@
             </div>
         </section>
 
-        <!-- COUNTRY SELECTOR (SECOND SESSION) -->
+        <!-- COUNTRY SELECTOR (SESSION 2) -->
         <section id="cta-options" class="px-6 py-24 bg-brand-gray/30 border-y border-gray-100">
             <div class="text-center mb-20 max-w-3xl mx-auto px-4">
                 <span class="bg-brand-blue/10 text-brand-blue text-[10px] font-black px-5 py-2 rounded-full uppercase tracking-[0.4em] mb-8 inline-block">Direct Global Logistics</span>
@@ -225,8 +225,8 @@
                             document.write(`
                                 <a href="${c.url}" class="benefit-card bg-white p-8 rounded-3xl border-2 border-brand-blue/5 flex flex-col items-center gap-5 no-underline group shadow-sm">
                                     <div class="relative">
-                                        <img src="https://flagcdn.com/w80/${c.code}.png" class="w-12 shadow-md rounded-lg" alt="${c.name}">
-                                        <div class="absolute -inset-2 bg-brand-blue/5 rounded-full scale-150 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                        <!-- Clean Flag Image -->
+                                        <img src="https://flagcdn.com/w80/${c.code}.png" class="w-12 rounded-lg" alt="${c.name}">
                                     </div>
                                     <div class="text-center">
                                         <span class="block font-black text-[13px] text-gray-900 uppercase tracking-widest group-hover:text-brand-blue mb-1">${c.name}</span>
@@ -411,8 +411,6 @@
                 <p>Our UV-C devices are designed for domestic use only and are not medical devices. They should never be used as a substitute for professional medical treatment.</p>
                 <h3>Safety Compliance</h3>
                 <p>Manufactured by licensed facilities meeting US and EU standards. Users must strictly follow operating instructions regarding room vacancy during operation.</p>
-                <h3>Pricing & Local Hubs</h3>
-                <p>Final prices include standard taxes. Regional import duties may apply depending on your delivery hub location.</p>
             `,
             'privacy': `
                 <h2>Privacy & Data Protection</h2>
@@ -421,10 +419,7 @@
                 <ul>
                     <li><strong>Transactional Data:</strong> Payment and shipping details (Kept for 12 months post-purchase).</li>
                     <li><strong>Technical Logs:</strong> IP address and device verification (Kept for 30 days).</li>
-                    <li><strong>Communication:</strong> Support history (Kept for 10 years for quality assurance).</li>
                 </ul>
-                <h3>Sharing & Third Parties</h3>
-                <p>Data is only shared with essential partners: Shopify (Infrastructure), Google (Analytics), and Local Hubs (Logistics).</p>
             `,
             'shipping': `
                 <h2>Global Shipping Hubs</h2>
@@ -432,21 +427,13 @@
                 <p>Standard dispatch within 12-24 hours. Global delivery typically takes 5-12 business days via localized shipping routes.</p>
                 <h3>Regional Logistics</h3>
                 <p>We utilize dedicated hubs in the USA, UK, and European regions to ensure minimum transit times and customs efficiency.</p>
-                <h3>Tracking Service</h3>
-                <p>A unique ID is sent via email within 48 hours of your order. Please monitor this for real-time status updates.</p>
             `,
             'returns': `
                 <h2>Return & Refund Policy</h2>
                 <h3>30-Day Evaluation</h3>
                 <p>If your ClairLite™ device does not meet your sanitization expectations, you are eligible for a full refund within 30 days of physical possession.</p>
                 <h3>Return Process</h3>
-                <ul>
-                    <li>Contact support@get-clairlite.com to initiate.</li>
-                    <li>Provide your unique Order ID and clear photos of the device state.</li>
-                    <li>Items must be in original, undamaged packaging.</li>
-                </ul>
-                <h3>Refund Credits</h3>
-                <p>Refunds are issued to the original payment method within 7-14 business days after inspection at our return hub.</p>
+                <p>Contact support@get-clairlite.com with your unique Order ID to initiate. Items must be in original, undamaged packaging.</p>
             `,
             'contact': `
                 <h2>Global Support Center</h2>
