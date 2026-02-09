@@ -71,6 +71,12 @@
             background-color: #ffffff;
             box-shadow: 0 10px 30px rgba(1, 36, 104, 0.1);
         }
+
+        .modal-content-text h2 { @apply text-2xl font-black mb-6 text-brand-blue; }
+        .modal-content-text h3 { @apply text-lg font-bold mt-8 mb-4 text-gray-800 uppercase tracking-tighter; }
+        .modal-content-text p { @apply mb-4 text-gray-600 leading-relaxed; }
+        .modal-content-text ul { @apply list-disc pl-5 mb-4 text-gray-600 space-y-2; }
+        .modal-content-text strong { @apply text-gray-900 font-bold; }
     </style>
 </head>
 <body class="bg-brand-gray text-gray-900">
@@ -93,12 +99,9 @@
         </div>
 
         <!-- HEADER -->
-        <header class="py-4 px-6 bg-brand-blue flex justify-between items-center sticky top-0 z-50">
+        <header class="py-4 px-6 bg-brand-blue flex justify-center items-center sticky top-0 z-50">
             <img src="images/clearlite-logo.svg" alt="ClairLite Logo" class="h-7 md:h-9 logo-light" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
             <span class="hidden text-white font-black text-xl tracking-tighter">CLAIRLITE™</span>
-            <button onclick="scrollToSelector()" class="bg-white text-brand-blue text-[10px] font-black px-4 py-2 rounded-full uppercase tracking-tighter hover:bg-opacity-90 transition-all">
-                Order Now
-            </button>
         </header>
 
         <!-- FLASH SALE BANNER -->
@@ -175,7 +178,7 @@
             </div>
         </section>
 
-        <!-- COUNTRY SELECTOR (SECOND SESSION - MOVED UP) -->
+        <!-- COUNTRY SELECTOR (SECOND SESSION) -->
         <section id="cta-options" class="px-6 py-20 bg-brand-gray/20 border-y border-gray-100">
             <div class="text-center mb-16">
                 <span class="bg-brand-blue/10 text-brand-blue text-[10px] font-black px-4 py-2 rounded-full uppercase tracking-[0.3em]">Global Logistics</span>
@@ -250,7 +253,7 @@
             </div>
         </div>
 
-        <!-- PROBLEM & SOLUTION SECTION (INCLUDES 1-2-3 STEPS) -->
+        <!-- PROBLEM & SOLUTION SECTION -->
         <section class="py-20 px-6 bg-brand-white">
             <div class="max-w-4xl mx-auto text-center">
                 <h2 class="text-3xl md:text-5xl font-black mb-16 tracking-tight text-brand-blue">Professional Room Sanitization</h2>
@@ -268,7 +271,7 @@
                     </div>
                 </div>
 
-                <!-- 1-2-3 Steps -->
+                <!-- Passos 1-2-3 -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="flex flex-col items-center p-6 bg-brand-gray/30 rounded-3xl border border-gray-100 shadow-sm benefit-card">
                         <div class="w-14 h-14 bg-brand-blue text-white rounded-full flex items-center justify-center font-black text-xl mb-6 shadow-lg shadow-brand-blue/20">1</div>
@@ -324,8 +327,8 @@
             <img src="images/clearlite-logo.svg" alt="Logo" class="h-6 mx-auto mb-10 logo-light">
             
             <nav class="flex flex-wrap justify-center gap-6 mb-12 text-[10px] font-bold uppercase tracking-widest text-white/80">
-                <button onclick="openModal('privacy')" class="hover:text-white transition">Privacy Policy</button>
                 <button onclick="openModal('terms')" class="hover:text-white transition">Terms of Service</button>
+                <button onclick="openModal('privacy')" class="hover:text-white transition">Privacy Policy</button>
                 <button onclick="openModal('shipping')" class="hover:text-white transition">Shipping</button>
                 <button onclick="openModal('returns')" class="hover:text-white transition">Refunds</button>
                 <button onclick="openModal('contact')" class="hover:text-white transition">Contact</button>
@@ -338,13 +341,16 @@
         </footer>
 
         <!-- MODAL -->
-        <div id="info-modal" class="fixed inset-0 bg-brand-footer/90 z-[100] hidden items-center justify-center p-4 backdrop-blur-md">
-            <div class="bg-white rounded-[2rem] w-full max-w-2xl max-h-[80vh] flex flex-col relative animate-fade-in-up">
-                <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-300 hover:text-brand-blue">
-                    <i class="fas fa-times text-xl"></i>
+        <div id="info-modal" class="fixed inset-0 bg-brand-footer/95 z-[100] hidden items-center justify-center p-4 backdrop-blur-md">
+            <div class="bg-white rounded-[2rem] w-full max-w-4xl max-h-[85vh] flex flex-col relative animate-fade-in-up">
+                <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-300 hover:text-brand-blue p-2">
+                    <i class="fas fa-times text-2xl"></i>
                 </button>
-                <div id="modal-content" class="p-10 overflow-y-auto text-sm text-gray-700 leading-relaxed">
-                    <!-- Dynamic Content -->
+                <div id="modal-content" class="p-8 md:p-12 overflow-y-auto text-sm text-gray-700 leading-relaxed modal-content-text">
+                    <!-- Detailed Legal Content Injected Here -->
+                </div>
+                <div class="p-6 bg-brand-gray/30 border-t border-gray-100 flex justify-end rounded-b-[2rem]">
+                    <button onclick="closeModal()" class="bg-brand-blue text-white px-8 py-3 rounded-xl font-bold uppercase tracking-widest text-xs hover:opacity-90 transition-all">Close</button>
                 </div>
             </div>
         </div>
@@ -360,18 +366,73 @@
             document.getElementById('current-date').innerText = months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
         })();
 
-        // Scroll
+        // Scroll Suave
         function scrollToSelector() {
             document.getElementById('cta-options').scrollIntoView({ behavior: 'smooth' });
         }
 
-        // Modais
+        // Modais Populated with provided data
         const modalData = {
-            'privacy': `<h2 class="text-2xl font-black mb-6">Privacy Policy</h2><p>Your privacy is important to us. We use your data strictly for order fulfillment and internal logistics tracking...</p>`,
-            'terms': `<h2 class="text-2xl font-black mb-6">Terms of Service</h2><p>By purchasing ClairLite™, you agree to our standard terms of sale and safety guidelines for UV-C usage...</p>`,
-            'shipping': `<h2 class="text-2xl font-black mb-6">Shipping</h2><p>International shipping typically takes 3 to 10 business days. Tracking numbers are provided upon dispatch.</p>`,
-            'returns': `<h2 class="text-2xl font-black mb-6">30-Day Guarantee</h2><p>Try ClairLite™ for 30 days. If you are not satisfied with your home sanitization results, return it for a refund.</p>`,
-            'contact': `<h2 class="text-2xl font-black mb-6">Support</h2><p>Email: support@vivellify-support.com<br>Phone: +49 40 7430 2972</p>`
+            'terms': `
+                <h2>Terms & Conditions</h2>
+                <p>Dear valued customer, please read these Terms of Service carefully before using any feature of https://get-clairlite.com/ or purchasing any products.</p>
+                <h3>Who We Are</h3>
+                <p><strong>ClairLite</strong> is a brand operated by <strong>UAB Rara Digital</strong>, Lithuanian company No. 306641699, address at Gedimino pr. 20, LT-01103, Vilnius, Lithuania.</p>
+                <h3>Our Products</h3>
+                <p>Products are for personal use only. Not medical devices. Manufactured in China by licensed facilities complying with US/EU safety standards.</p>
+                <h3>Delivery</h3>
+                <p>Processing: 1-3 business days. Arrival: 5-20 calendar days. Reported issues after 30 days will be handled by support.</p>
+                <h3>Returns & Refunds</h3>
+                <p>30-day term from delivery date. Contact support@get-clairlite.com for return authorization. Customer covers return shipping unless item is defective.</p>
+                <h3>Warranty</h3>
+                <p>Standard 2-year warranty for manufacturing defects. Does not cover misuse or mechanical damage.</p>
+                <h3>Pricing & Taxes</h3>
+                <p>Prices include taxes but import duties/VAT may apply depending on your country of residence.</p>
+            `,
+            'privacy': `
+                <h2>Privacy Policy</h2>
+                <p>We take precautions to protect your personal information in accordance with GDPR requirements.</p>
+                <h3>Data Collection</h3>
+                <ul>
+                    <li><strong>Purchases:</strong> Name, address, phone, email, payment info (Kept for 1 year).</li>
+                    <li><strong>Security:</strong> IP address, device ID, logs (Kept for 1 month).</li>
+                    <li><strong>Inquiries:</strong> Correspondence history (Kept for 10 years).</li>
+                </ul>
+                <h3>Sharing Info</h3>
+                <p>We share data with financial institutions, IT service providers (Shopify), logistics partners, and analytical tools (Google Analytics) purely for service fulfillment.</p>
+                <h3>Your Rights</h3>
+                <p>You have the right to access, correct, delete, or restrict the processing of your data. Contact support for identity verification.</p>
+                <h3>Cookies</h3>
+                <p>We use essential cookies (CloudFlare, Laravel) and targeting cookies to improve site performance.</p>
+            `,
+            'shipping': `
+                <h2>Shipping & Delivery</h2>
+                <h3>Processing</h3>
+                <p>Most items are dispatched within 12 hours. Average delivery time is 5-12 business days. Please allow up to 30 days for unexpected delays.</p>
+                <h3>Tracking</h3>
+                <p>You will receive a tracking ID via email. Please allow 1-3 business days for tracking info to update.</p>
+                <h3>Worldwide Shipping</h3>
+                <p>We ship globally. Buyers are responsible for providing correct addresses. We are not responsible for lost/stolen packages after delivery confirmation.</p>
+            `,
+            'returns': `
+                <h2>Returns & Cancellation</h2>
+                <h3>Cancellations</h3>
+                <p>You have 12 hours after purchase to cancel your order if it has not yet been shipped.</p>
+                <h3>Refund Eligibility</h3>
+                <p>Products must be brand new and in original packaging. Contact support with photos to initiate a return within 30 days.</p>
+                <h3>Refund Process</h3>
+                <p>Once received at our hub (USA, Germany, France, UK, or Lithuania), refunds take 5-7 days to issue and up to 20 days to appear in your bank.</p>
+            `,
+            'contact': `
+                <h2>Contact Us</h2>
+                <p>Need help? Our team is ready to assist you with any questions about your order or our sanitization technology.</p>
+                <div class="bg-brand-gray/20 p-6 rounded-2xl border border-brand-blue/10">
+                    <p><strong>Email:</strong> support@get-clairlite.com</p>
+                    <p><strong>Phone:</strong> +1 (231) 525-4420</p>
+                    <p><strong>Business:</strong> UAB Rara Digital</p>
+                    <p><strong>Address:</strong> Gedimino pr. 20, LT-01103, Vilnius, Lithuania</p>
+                </div>
+            `
         };
 
         function openModal(type) {
