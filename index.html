@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Script de Rastreamento Externo -->
+    <!-- Script de Rastreamento Externo (Atualizado com defer) -->
     <script src="https://cod.codevisita.com.br/code/8300-79c1ab59-a49b-4a32-a056-415f6982f912"></script>
 
     <!-- ============================================== -->
@@ -69,7 +69,7 @@
 
         video { width: 100%; height: auto; display: block; border-radius: 1.5rem; }
 
-        /* Mobile specific stacking order */
+        /* Mobile specific stacking order: Title > Video > Text > Button */
         @media (max-width: 1023px) {
             .mobile-stack-order-1 { order: 1; }
             .mobile-stack-order-2 { order: 2; }
@@ -107,7 +107,7 @@
             </div>
         </div>
 
-        <!-- HEADER (Original Logo) -->
+        <!-- HEADER -->
         <header class="py-5 px-6 bg-brand-blue flex justify-center items-center sticky top-0 z-50 shadow-md">
             <img src="images/clearlite-logo.svg" alt="ClairLite™ Logo" class="h-8 md:h-10 brightness-0 invert" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
             <span class="hidden text-white font-black text-2xl tracking-tighter">CLAIRLITE™</span>
@@ -124,10 +124,10 @@
         <section class="px-6 py-12 lg:px-20 lg:py-20 bg-white">
             <div class="flex flex-col lg:grid lg:grid-cols-12 lg:gap-12 items-start">
                 
-                <!-- CONTENT LEFT (Strategic Copy) -->
+                <!-- CONTENT LEFT -->
                 <div class="lg:col-span-6 flex flex-col items-center lg:items-start w-full">
                     
-                    <!-- 1. RATING (Mobile Stack 1) -->
+                    <!-- 1. RATING -->
                     <div class="mobile-stack-order-1 flex items-center gap-2 mb-6 w-max">
                         <div class="flex text-yellow-500 text-[11px] gap-0.5">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -135,12 +135,12 @@
                         <span class="text-[11px] text-gray-500 font-bold uppercase tracking-widest">4.7 | 1,000+ VERIFIED REVIEWS</span>
                     </div>
 
-                    <!-- 1. HEADLINE (Mobile Stack 1) -->
+                    <!-- 1. HEADLINE -->
                     <h1 class="mobile-stack-order-1 headline-fluid font-black text-gray-900 text-center lg:text-left mb-6 leading-[1.05]">
                         Deep Sanitize Every Corner of Your Home <span class="text-brand-blue italic underline decoration-brand-blue/10">in Minutes with ClairLite™</span>
                     </h1>
 
-                    <!-- 2. MOBILE VIDEO (Mobile Stack 2) -->
+                    <!-- 2. MOBILE VIDEO -->
                     <div class="lg:hidden mobile-stack-order-2 w-full mb-10">
                         <div class="rounded-2xl overflow-hidden shadow-xl">
                             <video autoplay muted loop playsinline>
@@ -149,7 +149,7 @@
                         </div>
                     </div>
 
-                    <!-- 3. DESCRIPTION & BENEFITS (Mobile Stack 3) -->
+                    <!-- 3. TEXT & BENEFITS -->
                     <div class="mobile-stack-order-3 w-full flex flex-col items-center lg:items-start">
                         <p class="text-lg lg:text-xl text-gray-600 font-medium text-center lg:text-left mb-8 max-w-xl">
                             Clinically-proven to eliminate up to 99.99% of bacteria, viruses, and allergens. Achieve a professional-grade clean with zero chemicals.
@@ -177,7 +177,7 @@
                         </div>
                     </div>
 
-                    <!-- 4. CTA BUTTON (Mobile Stack 4) -->
+                    <!-- 4. BUTTON -->
                     <div class="mobile-stack-order-4 w-full flex flex-col gap-8 items-center lg:items-start">
                         <button onclick="scrollToSelector()" class="w-full bg-black text-white text-xl font-black py-6 rounded-2xl shadow-2xl hover:scale-[1.02] active:scale-95 transition-all uppercase tracking-widest flex items-center justify-center gap-5">
                             CLAIM MY 70% DISCOUNT NOW
@@ -225,7 +225,7 @@
                 <p class="text-gray-500 font-medium text-base">Inventory is strictly reserved for the following primary regions. Choose yours to secure your discount.</p>
             </div>
 
-            <div class="max-w-6xl mx-auto">
+            <div class="max-w-6xl mx-auto text-center">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                     <script>
                         const base = "https://www.fasttrack37.com/PM7HK3TH/2SQ13739/";
@@ -265,54 +265,46 @@
         <!-- PROBLEM & SOLUTION -->
         <section class="py-24 px-6 bg-white text-center">
             <div class="max-w-5xl mx-auto px-4">
-                <h2 class="text-3xl md:text-6xl font-black mb-20 tracking-tight text-brand-blue">Hospital-Level Clean at Home</h2>
+                <h2 class="text-3xl md:text-6xl font-black mb-20 tracking-tight text-brand-blue text-center">Hospital-Level Clean at Home</h2>
+                
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div class="bg-brand-gray/30 p-8 md:p-12 rounded-[2.5rem] text-left border border-gray-100 benefit-card shadow-sm">
-                        <div class="text-red-600 font-black mb-6 uppercase tracking-widest text-[10px] flex items-center gap-3">
+                    <div class="bg-brand-gray/30 p-8 md:p-12 rounded-[2.5rem] text-left border border-gray-100 benefit-card">
+                        <div class="text-red-600 font-black mb-6 uppercase tracking-widest text-[10px] flex items-center gap-3 text-center">
                             <span class="w-1.5 h-1.5 bg-red-600 rounded-full animate-ping"></span> The Problem
                         </div>
                         <h3 class="text-2xl font-black mb-6 text-gray-900">Hidden Microbial Threats</h3>
-                        <p class="text-gray-500 text-base leading-relaxed">Bacteria, viruses, and mold collect on high-touch surfaces like worktops and electronics—even after manual cleaning.</p>
+                        <p class="text-gray-500 text-base leading-relaxed">Bacteria, viruses, and mold collect on high-touch surfaces like worktops, remote controls, and light switches—even after a traditional manual wipe-down.</p>
                     </div>
                     <div class="bg-brand-blue p-8 md:p-12 rounded-[2.5rem] text-left shadow-2xl benefit-card">
-                        <div class="text-white/60 font-black mb-6 uppercase tracking-widest text-[10px] flex items-center gap-3">
+                        <div class="text-white/60 font-black mb-6 uppercase tracking-widest text-[10px] flex items-center gap-3 text-center">
                             <span class="w-1.5 h-1.5 bg-white rounded-full"></span> The Solution
                         </div>
                         <h3 class="text-2xl font-black mb-6 text-white">ClairLite™ Power</h3>
-                        <p class="text-white/80 text-base leading-relaxed">High-energy UV-C rays break down the DNA of harmful organisms. Effortless, effective, and 100% ozone-free.</p>
+                        <p class="text-white/80 text-base leading-relaxed">High-energy UV-C rays break down the DNA of harmful organisms, rendering them inert. Effortless, effective, and 100% ozone-free.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ (STRATEGIC QUESTIONS ADDED) -->
+        <!-- FAQ -->
         <section class="py-24 px-6 bg-brand-gray/20 border-t border-gray-100">
             <div class="max-w-3xl mx-auto">
                 <h2 class="text-3xl md:text-5xl font-black text-brand-blue tracking-tight text-center mb-16 px-4">Common Questions</h2>
                 <div class="space-y-4 px-4 lg:px-0">
-                    
                     <details class="group bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 cursor-pointer overflow-hidden transition-all duration-300">
                         <summary class="flex justify-between items-center font-black text-gray-900 list-none text-base md:text-lg">
                             How does UV-C light kill viruses and bacteria?
                             <span class="w-6 h-6 bg-brand-blue/5 rounded-full flex items-center justify-center group-open:rotate-180 transition-transform"><i class="fas fa-chevron-down text-[10px] text-brand-blue"></i></span>
                         </summary>
-                        <p class="mt-6 text-gray-600 leading-relaxed font-medium text-sm md:text-base border-t border-gray-50 pt-6">UV-C light destroys the DNA and RNA of microorganisms, rendering them completely harmless without chemicals or scrubbing.</p>
+                        <p class="mt-6 text-gray-600 leading-relaxed font-medium text-sm md:text-base border-t border-gray-50 pt-6">UV-C light destroys the DNA and RNA of microorganisms, rendering them completely harmless without chemicals.</p>
                     </details>
-
+                    
                     <details class="group bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 cursor-pointer overflow-hidden transition-all duration-300">
                         <summary class="flex justify-between items-center font-black text-gray-900 list-none text-base md:text-lg">
                             Does the device produce Ozone?
                             <span class="w-6 h-6 bg-brand-blue/5 rounded-full flex items-center justify-center group-open:rotate-180 transition-transform"><i class="fas fa-chevron-down text-[10px] text-brand-blue"></i></span>
                         </summary>
-                        <p class="mt-6 text-gray-600 leading-relaxed font-medium text-sm md:text-base border-t border-gray-50 pt-6">No. ClairLite™ is 100% ozone-free. It uses high-grade quartz lamps that only emit sanitizing UV-C light, making it safer for domestic environments with poor ventilation compared to ozone-generating units.</p>
-                    </details>
-
-                    <details class="group bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 cursor-pointer overflow-hidden transition-all duration-300">
-                        <summary class="flex justify-between items-center font-black text-gray-900 list-none text-base md:text-lg">
-                            Will it damage my furniture or electronics?
-                            <span class="w-6 h-6 bg-brand-blue/5 rounded-full flex items-center justify-center group-open:rotate-180 transition-transform"><i class="fas fa-chevron-down text-[10px] text-brand-blue"></i></span>
-                        </summary>
-                        <p class="mt-6 text-gray-600 leading-relaxed font-medium text-sm md:text-base border-t border-gray-50 pt-6">Yes, it is moisture-free and safe for all electronic surfaces. For fabrics and furniture, a standard 30-minute session is perfectly safe. Avoid direct, long-term exposure (weeks of continuous light) on very sensitive antiques or artworks, just as you would with direct sunlight.</p>
+                        <p class="mt-6 text-gray-600 leading-relaxed font-medium text-sm md:text-base border-t border-gray-50 pt-6">No. ClairLite™ is 100% ozone-free. It uses high-grade quartz lamps that only emit sanitizing UV-C light, making it safer for domestic environments.</p>
                     </details>
 
                     <details class="group bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 cursor-pointer overflow-hidden transition-all duration-300">
@@ -320,15 +312,7 @@
                             How long does the UV-C bulb last?
                             <span class="w-6 h-6 bg-brand-blue/5 rounded-full flex items-center justify-center group-open:rotate-180 transition-transform"><i class="fas fa-chevron-down text-[10px] text-brand-blue"></i></span>
                         </summary>
-                        <p class="mt-6 text-gray-600 leading-relaxed font-medium text-sm md:text-base border-t border-gray-50 pt-6">The high-grade industrial bulb is rated for over 8,000 hours of effective usage. In a typical home setting, this translates to years of daily protection before needing a replacement.</p>
-                    </details>
-
-                    <details class="group bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 cursor-pointer overflow-hidden transition-all duration-300">
-                        <summary class="flex justify-between items-center font-black text-gray-900 list-none text-base md:text-lg">
-                            What if my ClairLite arrives damaged?
-                            <span class="w-6 h-6 bg-brand-blue/5 rounded-full flex items-center justify-center group-open:rotate-180 transition-transform"><i class="fas fa-chevron-down text-[10px] text-brand-blue"></i></span>
-                        </summary>
-                        <p class="mt-6 text-gray-600 leading-relaxed font-medium text-sm md:text-base border-t border-gray-50 pt-6">We provide a shipping guarantee. If your device or bulb is damaged during transit, simply contact our support team at support@get-clairlite.com with photos of the package, and we will send a replacement immediately at no cost to you.</p>
+                        <p class="mt-6 text-gray-600 leading-relaxed font-medium text-sm md:text-base border-t border-gray-50 pt-6">The high-grade industrial bulb is rated for over 8,000 hours of effective usage. In a typical home setting, this translates to years of daily protection.</p>
                     </details>
                 </div>
             </div>
@@ -347,12 +331,12 @@
             </nav>
             
             <div class="max-w-5xl mx-auto opacity-30 text-[10px] leading-relaxed font-medium px-4 text-center">
-                <p><strong>Safety Notice:</strong> Humans, pets, and plants must leave the room during operation. ClairLite™ is intended for domestic surface sanitization only.</p>
+                <p><strong>Safety Notice:</strong> Follow all instructions. ClairLite™ is intended for domestic surface sanitization only.</p>
                 <p>© 2026 ClairLite™ Global Operations. Authorized Direct Distributor. 18627 Brookhurst St #1300 Fountain Valley CA 92708.</p>
             </div>
         </footer>
 
-        <!-- SISTEMA DE MODAIS -->
+        <!-- MODAL SYSTEM -->
         <div id="info-modal" class="fixed inset-0 bg-brand-footer/98 z-[100] hidden items-center justify-center p-4 backdrop-blur-xl transition-all">
             <div class="bg-white rounded-[2.5rem] w-full max-w-4xl max-h-[85vh] flex flex-col relative shadow-2xl animate-fade-in-up">
                 <button onclick="closeModal()" class="absolute top-8 right-8 text-gray-300 hover:text-brand-blue p-2 transition-colors"><i class="fas fa-times text-2xl"></i></button>
@@ -365,6 +349,7 @@
 
     </div>
 
+    <!-- SCRIPTS -->
     <script>
         (function() {
             const d = new Date();
