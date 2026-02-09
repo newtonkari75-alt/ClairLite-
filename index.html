@@ -28,15 +28,7 @@
     <meta name="description" content="Deep sanitize your home in minutes with ClairLite™ UV-C technology. Kills 99.99% of germs, bacteria, and allergens. Chemical-free protection. 30-day guarantee.">
     <link rel="canonical" href="https://clairlite.vercel.app/">
 
-    <!-- Multiregional Hreflang Signalling -->
-    <link rel="alternate" href="https://clairlite.vercel.app/" hreflang="x-default">
-    <link rel="alternate" href="https://clairlite.vercel.app/" hreflang="en-US">
-    <link rel="alternate" href="https://clairlite.vercel.app/" hreflang="en-GB">
-    <link rel="alternate" href="https://clairlite.vercel.app/" hreflang="de-DE">
-    <link rel="alternate" href="https://clairlite.vercel.app/" hreflang="fr-FR">
-    <link rel="alternate" href="https://clairlite.vercel.app/" hreflang="pt-PT">
-
-    <!-- Structured Data -->
+    <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
@@ -77,15 +69,14 @@
         .benefit-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         .benefit-card:hover { transform: translateY(-5px); border-color: #012468 !important; }
 
-        /* Media and Video Styling */
         video { width: 100%; height: auto; display: block; border-radius: 1.5rem; }
 
-        /* Mobile Adjustments for "Title > Photo > Text > Button" */
+        /* Mobile specific stacking: Title > Video > Text > Button */
         @media (max-width: 1023px) {
-            .mobile-order-1 { order: 1; }
-            .mobile-order-2 { order: 2; }
-            .mobile-order-3 { order: 3; }
-            .mobile-order-4 { order: 4; }
+            .mobile-stack-order-1 { order: 1; }
+            .mobile-stack-order-2 { order: 2; }
+            .mobile-stack-order-3 { order: 3; }
+            .mobile-stack-order-4 { order: 4; }
         }
     </style>
 </head>
@@ -121,92 +112,87 @@
             </span>
         </div>
 
-        <!-- HERO SECTION (MATCHING SCREENSHOT MODEL) -->
+        <!-- HERO SECTION (ALIGNMENT BASED ON UPLOADED MODEL | COPY REVERTED TO ORIGINAL) -->
         <section class="px-6 py-12 lg:px-20 lg:py-20 bg-white">
             <div class="flex flex-col lg:grid lg:grid-cols-12 lg:gap-12 items-start">
                 
-                <!-- LEFT CONTENT COLUMN (6 cols on Desktop) -->
+                <!-- LEFT CONTENT COLUMN (Reverting to Strategic Copy) -->
                 <div class="lg:col-span-6 flex flex-col items-center lg:items-start w-full">
                     
-                    <!-- 1. RATING & REVIEWS (Mobile Order 1) -->
-                    <div class="mobile-order-1 flex items-center gap-2 mb-6 w-max">
+                    <!-- 1. RATING (Mobile Order 1) -->
+                    <div class="mobile-stack-order-1 flex items-center gap-2 mb-6 w-max">
                         <div class="flex text-yellow-500 text-[11px] gap-0.5">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <span class="text-[11px] text-gray-500 font-bold uppercase tracking-widest">4.7 | 1000+ Verified Reviews</span>
+                        <span class="text-[11px] text-gray-500 font-bold uppercase tracking-widest">4.7 | 1,000+ VERIFIED REVIEWS</span>
                     </div>
 
                     <!-- 1. HEADLINE (Mobile Order 1) -->
-                    <h1 class="mobile-order-1 headline-fluid font-black text-gray-900 text-center lg:text-left mb-4 leading-[1.05]">
-                        Sanitize Every Inch Of Your Home In Minutes With ClairLite
+                    <h1 class="mobile-stack-order-1 headline-fluid font-black text-gray-900 text-center lg:text-left mb-6 leading-[1.05]">
+                        Deep Sanitize Every Corner of Your Home <span class="text-brand-blue italic underline decoration-brand-blue/10">in Minutes with ClairLite™</span>
                     </h1>
 
-                    <!-- 3. SUBTITLE (Mobile Order 3) -->
-                    <p class="mobile-order-3 text-lg lg:text-xl text-gray-500 font-medium text-center lg:text-left mb-8 max-w-xl">
-                        Kill 99.99% of Germs without Lifting a Finger
-                    </p>
-
-                    <!-- 2. PHOTO/VIDEO (Mobile Order 2 | Hidden on Desktop in this column) -->
-                    <div class="lg:hidden mobile-order-2 w-full mb-10">
+                    <!-- 2. MOBILE VIDEO (Mobile Order 2 | Hidden on Desktop here) -->
+                    <div class="lg:hidden mobile-stack-order-2 w-full mb-10">
                         <div class="rounded-2xl overflow-hidden shadow-xl">
-                            <video autoplay muted loop playsinline poster="images/clearlite-logo.svg">
+                            <video autoplay muted loop playsinline>
                                 <source src="images/clearlite.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
 
-                    <!-- 3. BULLETS (Mobile Order 3) -->
-                    <div class="mobile-order-3 space-y-4 mb-10 w-full">
-                        <div class="flex items-center gap-4 group">
-                            <div class="w-6 h-6 rounded-full bg-[#012468] flex items-center justify-center shrink-0">
-                                <i class="fas fa-check text-white text-[10px]"></i>
+                    <!-- 3. DESCRIPTION & BULLETS (Mobile Order 3) -->
+                    <div class="mobile-stack-order-3 w-full flex flex-col items-center lg:items-start">
+                        <p class="text-lg lg:text-xl text-gray-600 font-medium text-center lg:text-left mb-8 max-w-xl">
+                            Clinically-proven to eliminate up to 99.99% of bacteria, viruses, and allergens. Achieve a professional-grade clean with zero chemicals.
+                        </p>
+
+                        <div class="space-y-4 mb-10 w-full max-w-sm">
+                            <div class="flex items-center gap-4 group">
+                                <div class="w-6 h-6 rounded-full bg-[#012468] flex items-center justify-center shrink-0 shadow-lg">
+                                    <i class="fas fa-check text-white text-[10px]"></i>
+                                </div>
+                                <span class="text-base font-bold text-gray-700">100% Chemical-Free UV-C Light</span>
                             </div>
-                            <span class="text-base font-bold text-gray-700">Eliminates germs, bacteria & allergens</span>
+                            <div class="flex items-center gap-4 group">
+                                <div class="w-6 h-6 rounded-full bg-[#012468] flex items-center justify-center shrink-0 shadow-lg">
+                                    <i class="fas fa-check text-white text-[10px]"></i>
+                                </div>
+                                <span class="text-base font-bold text-gray-700">Safe for Furniture & Electronics</span>
+                            </div>
+                            <div class="flex items-center gap-4 group">
+                                <div class="w-6 h-6 rounded-full bg-[#012468] flex items-center justify-center shrink-0 shadow-lg">
+                                    <i class="fas fa-check text-white text-[10px]"></i>
+                                </div>
+                                <span class="text-base font-bold text-gray-700">Intelligent Remote & Auto Shut-off</span>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-4 group">
-                            <div class="w-6 h-6 rounded-full bg-[#012468] flex items-center justify-center shrink-0">
-                                <i class="fas fa-check text-white text-[10px]"></i>
+
+                        <!-- Social Proof Bar -->
+                        <div class="w-full max-w-lg mb-8 border border-gray-100 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 bg-gray-50/50">
+                            <div class="flex items-center gap-3">
+                                <div class="flex -space-x-2">
+                                    <div class="w-8 h-8 rounded-full border-2 border-white bg-gray-200"></div>
+                                    <div class="w-8 h-8 rounded-full border-2 border-white bg-gray-300"></div>
+                                    <div class="w-8 h-8 rounded-full border-2 border-white bg-gray-400"></div>
+                                </div>
+                                <span class="text-[11px] font-bold text-gray-700 uppercase tracking-tight"><strong>8,000+</strong> Protected Homes</span>
                             </div>
-                            <span class="text-base font-bold text-gray-700">100% chemical-free disinfection</span>
-                        </div>
-                        <div class="flex items-center gap-4 group">
-                            <div class="w-6 h-6 rounded-full bg-[#012468] flex items-center justify-center shrink-0">
-                                <i class="fas fa-check text-white text-[10px]"></i>
+                            <div class="flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                                <span class="text-[11px] font-bold text-green-600 uppercase tracking-tight">In stock and ready to ship</span>
                             </div>
-                            <span class="text-base font-bold text-gray-700">Remote-controlled with auto shut-off</span>
-                        </div>
-                        <div class="flex items-center gap-4 group">
-                            <div class="w-6 h-6 rounded-full bg-[#012468] flex items-center justify-center shrink-0">
-                                <i class="fas fa-check text-white text-[10px]"></i>
-                            </div>
-                            <span class="text-base font-bold text-gray-700">Can sanitize every surface</span>
                         </div>
                     </div>
 
-                    <!-- 3. TRUST BAR (Mobile Order 3) -->
-                    <div class="mobile-order-3 w-full max-w-lg mb-8 border border-gray-100 rounded-xl p-3 flex flex-col sm:flex-row items-center justify-between gap-4 bg-white/50">
-                        <div class="flex items-center gap-3">
-                            <div class="flex -space-x-2">
-                                <div class="w-8 h-8 rounded-full border-2 border-white bg-gray-200"></div>
-                                <div class="w-8 h-8 rounded-full border-2 border-white bg-gray-300"></div>
-                                <div class="w-8 h-8 rounded-full border-2 border-white bg-gray-400"></div>
-                            </div>
-                            <span class="text-[11px] font-bold text-gray-700 uppercase tracking-tight"><strong>8K+</strong> Happy Customers</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                            <span class="text-[11px] font-bold text-green-600 uppercase tracking-tight">In stock and ready to ship</span>
-                        </div>
-                    </div>
-
-                    <!-- 4. CTA BUTTON (Mobile Order 4) -->
-                    <div class="mobile-order-4 w-full flex flex-col gap-8">
-                        <button onclick="scrollToSelector()" class="w-full bg-black text-white text-lg font-black py-6 rounded-xl shadow-2xl hover:scale-[1.02] active:scale-95 transition-all uppercase tracking-widest flex items-center justify-center gap-5">
-                            GET A -70% DISCOUNT
+                    <!-- 4. BUTTON (Mobile Order 4) -->
+                    <div class="mobile-stack-order-4 w-full flex flex-col gap-8 items-center lg:items-start">
+                        <button onclick="scrollToSelector()" class="w-full bg-black text-white text-xl font-black py-6 rounded-2xl shadow-2xl hover:scale-[1.02] active:scale-95 transition-all uppercase tracking-widest flex items-center justify-center gap-5">
+                            CLAIM MY 70% DISCOUNT NOW
                         </button>
                         
-                        <!-- Badges Footer of Hero -->
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 w-full opacity-70">
+                        <!-- Trust Badges -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 w-full opacity-60">
                             <div class="flex flex-col items-center gap-2 text-center">
                                 <i class="fas fa-microscope text-xl text-brand-blue"></i>
                                 <span class="text-[9px] font-black leading-tight uppercase">Microbiologist Approved</span>
@@ -227,29 +213,18 @@
                     </div>
                 </div>
 
-                <!-- RIGHT MEDIA COLUMN (6 cols on Desktop) -->
+                <!-- RIGHT MEDIA COLUMN (Desktop Layout | Fixed Placement) -->
                 <div class="hidden lg:flex lg:col-span-6 justify-center sticky top-32">
-                    <div class="relative w-full max-w-2xl bg-gray-100 rounded-[2.5rem] overflow-hidden aspect-square flex items-center justify-center">
-                        <!-- Video Media -->
+                    <div class="relative w-full max-w-2xl bg-gray-50 rounded-[2.5rem] overflow-hidden aspect-square flex items-center justify-center">
                         <video autoplay muted loop playsinline class="w-full h-full object-cover">
                             <source src="images/clearlite.mp4" type="video/mp4">
                         </video>
                         
-                        <!-- Image Overlay Text (Matching screenshot) -->
-                        <div class="absolute top-12 left-10 text-left z-10">
-                            <h2 class="text-4xl font-black text-brand-blue leading-tight max-w-[280px]">
-                                #1 Hospital-Grade UV Sanitizer
-                            </h2>
-                            <p class="mt-4 text-brand-blue font-bold text-lg max-w-[300px]">
-                                Instantly Eliminates Germs, Viruses, Allergens, Mold, and Dust
-                            </p>
-                        </div>
-                        
-                        <!-- Award Icons Overlay -->
+                        <!-- Tech Awards Overlay (Matching Model Image) -->
                         <div class="absolute bottom-10 left-10 flex flex-col gap-4">
-                            <div class="bg-black/10 backdrop-blur-sm p-3 rounded-lg border border-white/20">
+                            <div class="bg-black/20 backdrop-blur-md p-4 rounded-xl border border-white/20">
                                 <i class="fas fa-award text-yellow-500 text-3xl"></i>
-                                <p class="text-[10px] font-black text-white uppercase mt-1">Tech Awards 2025</p>
+                                <p class="text-[10px] font-black text-white uppercase mt-1">Top Tech Awards 2025</p>
                             </div>
                         </div>
                     </div>
@@ -258,9 +233,9 @@
             </div>
         </section>
 
-        <!-- COUNTRY SELECTOR (SESSION 2) -->
-        <section id="cta-options" class="px-6 py-20 bg-brand-gray/30 border-y border-gray-100">
-            <div class="text-center mb-16 max-w-3xl mx-auto px-4">
+        <!-- SHIPPING HUBS -->
+        <section id="cta-options" class="px-6 py-20 bg-brand-gray/30 border-y border-gray-100 text-center">
+            <div class="mb-16 max-w-3xl mx-auto px-4">
                 <span class="bg-brand-blue/10 text-brand-blue text-[10px] font-black px-5 py-2 rounded-full uppercase tracking-[0.4em] mb-6 inline-block">Global Distribution Hubs</span>
                 <h2 class="text-3xl md:text-5xl font-black mb-6 tracking-tight text-gray-900">Select Your Shipping Destination</h2>
                 <p class="text-gray-500 font-medium text-base">Inventory is strictly reserved for the following primary regions. Choose yours to secure your discount.</p>
@@ -289,8 +264,8 @@
 
                         hubs.forEach(c => {
                             document.write(`
-                                <a href="${c.url}" class="benefit-card bg-white p-6 md:p-8 rounded-2xl border-2 border-brand-blue/5 flex flex-col items-center gap-4 no-underline group shadow-sm">
-                                    <img src="https://flagcdn.com/w80/${c.code}.png" class="w-10 md:w-12 rounded-lg" alt="${c.name}">
+                                <a href="${c.url}" class="benefit-card bg-white p-6 md:p-8 rounded-3xl border-2 border-brand-blue/5 flex flex-col items-center gap-4 no-underline group shadow-sm">
+                                    <img src="https://flagcdn.com/w80/${c.code}.png" class="w-10 md:w-12 rounded-lg shadow-sm" alt="${c.name}">
                                     <div class="text-center">
                                         <span class="block font-black text-[12px] md:text-[13px] text-gray-900 uppercase tracking-widest group-hover:text-brand-blue mb-1">${c.name}</span>
                                         <span class="text-[8px] md:text-[9px] font-bold text-brand-blue uppercase opacity-60">${c.tag}</span>
@@ -303,48 +278,47 @@
             </div>
         </section>
 
-        <!-- PROBLEM & SOLUTION SECTION -->
-        <section class="py-24 px-6 bg-white">
-            <div class="max-w-5xl mx-auto text-center">
+        <!-- PROBLEM & SOLUTION -->
+        <section class="py-24 px-6 bg-white text-center">
+            <div class="max-w-5xl mx-auto px-4">
                 <h2 class="text-3xl md:text-6xl font-black mb-20 tracking-tight text-brand-blue">Hospital-Level Clean at Home</h2>
-                
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div class="bg-brand-gray/30 p-8 md:p-12 rounded-[2.5rem] text-left border border-gray-100 benefit-card">
                         <div class="text-red-600 font-black mb-6 uppercase tracking-widest text-[10px] flex items-center gap-3">
                             <span class="w-1.5 h-1.5 bg-red-600 rounded-full animate-ping"></span> The Problem
                         </div>
                         <h3 class="text-2xl font-black mb-6 text-gray-900">Hidden Microbial Threats</h3>
-                        <p class="text-gray-500 text-base leading-relaxed">Bacteria, viruses, and mold collect on high-touch surfaces like worktops, remote controls, and light switches—even after a traditional manual wipe-down.</p>
+                        <p class="text-gray-500 text-base leading-relaxed">Bacteria, viruses, and mold collect on high-touch surfaces like worktops and electronics—even after manual cleaning.</p>
                     </div>
                     <div class="bg-brand-blue p-8 md:p-12 rounded-[2.5rem] text-left shadow-2xl benefit-card">
                         <div class="text-white/60 font-black mb-6 uppercase tracking-widest text-[10px] flex items-center gap-3">
                             <span class="w-1.5 h-1.5 bg-white rounded-full"></span> The Solution
                         </div>
                         <h3 class="text-2xl font-black mb-6 text-white">ClairLite™ Power</h3>
-                        <p class="text-white/80 text-base leading-relaxed">High-energy UV-C rays break down the DNA of harmful organisms, rendering them inert. Effortless, effective, and 100% ozone-free.</p>
+                        <p class="text-white/80 text-base leading-relaxed">High-energy UV-C rays break down the DNA of harmful organisms. Effortless, effective, and 100% ozone-free.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ SECTION -->
+        <!-- FAQ -->
         <section class="py-24 px-6 bg-brand-gray/20 border-t border-gray-100">
             <div class="max-w-3xl mx-auto">
-                <h2 class="text-3xl md:text-5xl font-black text-brand-blue tracking-tight text-center mb-16 px-4">Common Questions</h2>
+                <h2 class="text-3xl md:text-5xl font-black text-brand-blue tracking-tight text-center mb-16">Common Questions</h2>
                 <div class="space-y-4 px-4 lg:px-0">
                     <details class="group bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 cursor-pointer overflow-hidden transition-all duration-300">
                         <summary class="flex justify-between items-center font-black text-gray-900 list-none text-base md:text-lg">
                             How does UV-C light kill viruses and bacteria?
                             <span class="w-6 h-6 bg-brand-blue/5 rounded-full flex items-center justify-center group-open:rotate-180 transition-transform"><i class="fas fa-chevron-down text-[10px] text-brand-blue"></i></span>
                         </summary>
-                        <p class="mt-6 text-gray-600 leading-relaxed font-medium text-sm md:text-base border-t border-gray-50 pt-6">UV-C light destroys the DNA and RNA of microorganisms. This renders them harmless, effectively "killing" them without chemicals.</p>
+                        <p class="mt-6 text-gray-600 leading-relaxed font-medium text-sm md:text-base border-t border-gray-50 pt-6">UV-C light destroys the DNA and RNA of microorganisms, rendering them completely harmless without chemicals.</p>
                     </details>
                     <details class="group bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 cursor-pointer overflow-hidden transition-all duration-300">
                         <summary class="flex justify-between items-center font-black text-gray-900 list-none text-base md:text-lg">
-                            Is it safe for smartphones and laptops?
+                            Is it safe for electronics?
                             <span class="w-6 h-6 bg-brand-blue/5 rounded-full flex items-center justify-center group-open:rotate-180 transition-transform"><i class="fas fa-chevron-down text-[10px] text-brand-blue"></i></span>
                         </summary>
-                        <p class="mt-6 text-gray-600 leading-relaxed font-medium text-sm md:text-base border-t border-gray-50 pt-6">Yes. Unlike chemical sprays, UV-C is light-based and moisture-free, making it the safest way to sanitize sensitive electronics.</p>
+                        <p class="mt-6 text-gray-600 leading-relaxed font-medium text-sm md:text-base border-t border-gray-50 pt-6">Yes. UV-C is light-based and moisture-free, making it the safest way to sanitize sensitive electronic surfaces.</p>
                     </details>
                 </div>
             </div>
@@ -360,13 +334,13 @@
                 <button onclick="openModal('returns')" class="hover:text-white transition hover:underline underline-offset-8">Returns</button>
                 <button onclick="openModal('contact')" class="hover:text-white transition hover:underline underline-offset-8">Support</button>
             </nav>
-            <div class="max-w-5xl mx-auto space-y-6 opacity-30 text-[10px] leading-relaxed font-medium px-4 text-center">
+            <div class="max-w-5xl mx-auto opacity-30 text-[10px] leading-relaxed font-medium px-4">
                 <p><strong>Safety Notice:</strong> Follow all instructions. ClairLite™ is intended for domestic surface sanitization only.</p>
                 <p>© 2026 ClairLite™ Global Operations. Authorized Direct Distributor. 18627 Brookhurst St #1300 Fountain Valley CA 92708.</p>
             </div>
         </footer>
 
-        <!-- MODAL SYSTEM -->
+        <!-- MODAL -->
         <div id="info-modal" class="fixed inset-0 bg-brand-footer/98 z-[100] hidden items-center justify-center p-4 backdrop-blur-xl transition-all">
             <div class="bg-white rounded-[2.5rem] w-full max-w-4xl max-h-[85vh] flex flex-col relative shadow-2xl animate-fade-in-up">
                 <button onclick="closeModal()" class="absolute top-8 right-8 text-gray-300 hover:text-brand-blue p-2"><i class="fas fa-times text-2xl"></i></button>
@@ -379,7 +353,7 @@
 
     </div>
 
-    <!-- LOGIC -->
+    <!-- SCRIPTS -->
     <script>
         (function() {
             const d = new Date();
@@ -390,7 +364,7 @@
         function scrollToSelector() { document.getElementById('cta-options').scrollIntoView({ behavior: 'smooth' }); }
 
         const modalData = {
-            'terms': `<h2>Terms of Service</h2><p>ClairLite™ is a brand operated by UAB Rara Digital, Lithuania.</p>`,
+            'terms': `<h2>Terms of Service</h2><p>ClairLite™ is a premium sanitization brand operated by UAB Rara Digital, Lithuania.</p>`,
             'privacy': `<h2>Privacy Policy</h2><p>Your data is processed strictly for order fulfillment and internal tracking.</p>`,
             'shipping': `<h2>Shipping Hubs</h2><p>Average delivery time is 5-12 business days via localized shipping routes.</p>`,
             'returns': `<h2>Return Policy</h2><p>Eligible for a full refund within 30 days if sanitization standards are not met.</p>`,
