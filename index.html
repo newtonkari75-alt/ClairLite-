@@ -20,8 +20,8 @@
     <!-- ============================================== -->
     <!-- 2. SEO META TAGS -->
     <!-- ============================================== -->
-    <title>ClairLite™ | Professional Home Sanitization (70% OFF)</title>
-    <meta name="description" content="Sanitize every inch of your home in minutes with ClairLite. Kills 99.99% of germs, viruses, and allergens without chemicals.">
+    <title>ClairLite™ | Professional Home UV-C Sanitization (70% OFF)</title>
+    <meta name="description" content="Sanitize every inch of your home in minutes with ClairLite™. Reduces 99.99% of germs, bacteria, and allergens using 100% chemical-free UV-C light.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -58,10 +58,15 @@
             line-height: 1.1;
         }
 
+        .benefit-card {
+            transition: all 0.3s ease;
+        }
+
         .benefit-card:hover {
             transform: translateY(-5px);
-            transition: all 0.3s ease;
-            border-color: #012468;
+            border-color: #012468 !important;
+            background-color: #ffffff;
+            box-shadow: 0 10px 30px rgba(1, 36, 104, 0.1);
         }
     </style>
 </head>
@@ -69,7 +74,7 @@
 
     <div class="w-full lg:max-w-[1440px] mx-auto bg-brand-white shadow-2xl relative overflow-hidden">
         
-        <!-- TOP ANNOUNCEMENT BAR -->
+        <!-- TOP ANNOUNCEMENT BAR (Updated #E9E9E9) -->
         <div class="bg-brand-gray py-2 px-4 border-b border-gray-200">
             <div class="flex justify-center items-center gap-4 md:gap-12">
                 <div class="flex items-center gap-2">
@@ -93,7 +98,7 @@
             </button>
         </header>
 
-        <!-- FLASH SALE BANNER -->
+        <!-- FLASH SALE BANNER (Black) -->
         <div class="bg-black text-white text-center py-2.5 px-4 border-b border-white/10">
             <span class="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.2em]">
                 FLASH SALE: 70% DISCOUNT UNTIL <span id="current-date" class="underline decoration-yellow-400">TODAY</span>
@@ -107,25 +112,44 @@
                     <div class="flex text-yellow-500 text-[10px] gap-0.5">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <span class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">4.7 | 1000+ Verified Reviews</span>
+                    <span class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">4.7 | 1,000+ Verified Reviews</span>
                 </div>
                 
                 <h1 class="headline-fluid font-black text-gray-900 mb-6">
-                    Sanitize Every Inch of Your Home <span class="text-brand-blue italic underline decoration-brand-blue/20">in Minutes with ClairLite.</span>
+                    Sanitize Every Inch of Your Home <span class="text-brand-blue italic underline decoration-brand-blue/20">in Minutes with ClairLite™</span>
                 </h1>
 
                 <p class="text-lg text-gray-600 font-medium mb-8 leading-relaxed max-w-xl">
-                    Kills 99.99% of all germs—with zero effort. No chemicals, no toxins. Removes bacteria, viruses & allergens naturally from any surface.
+                    Reduces up to 99.99% of common household germs—completely without scrubbing. Effortless professional room disinfection for your family.
                 </p>
+
+                <div class="space-y-3 mb-8 text-left w-full max-w-md mx-auto lg:mx-0">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-check-circle text-green-500 text-sm"></i>
+                        <span class="text-sm font-semibold text-gray-700">Removes bacteria & allergens from surfaces</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-check-circle text-green-500 text-sm"></i>
+                        <span class="text-sm font-semibold text-gray-700">100% chemical-free UV-C disinfection</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-check-circle text-green-500 text-sm"></i>
+                        <span class="text-sm font-semibold text-gray-700">Remote control with auto shut-off</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-check-circle text-green-500 text-sm"></i>
+                        <span class="text-sm font-semibold text-gray-700">Safe for furniture, textiles & electronics</span>
+                    </div>
+                </div>
 
                 <div class="bg-green-50 text-green-700 px-4 py-3 rounded-xl border border-green-100 mb-8 flex flex-col md:flex-row gap-4 items-center justify-center lg:justify-start w-full">
                     <div class="flex items-center gap-2">
                         <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                        <span class="text-[11px] font-bold uppercase tracking-wider">Over 8,000 satisfied customers</span>
+                        <span class="text-[11px] font-bold uppercase tracking-wider">8,000+ happy customers</span>
                     </div>
                     <div class="hidden md:block w-px h-4 bg-green-200"></div>
                     <div class="flex items-center gap-2">
-                        <span class="text-[11px] font-bold uppercase tracking-wider">🟢 In stock for immediate delivery</span>
+                        <span class="text-[11px] font-bold uppercase tracking-wider">🟢 In Stock - Limited Supply</span>
                     </div>
                 </div>
 
@@ -149,51 +173,66 @@
             </div>
         </section>
 
-        <!-- BENEFITS STRIP -->
+        <!-- WHY CLAIRLITE STRIP -->
         <div class="bg-brand-blue py-6 px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-white text-center">
             <div class="flex flex-col items-center gap-2">
                 <i class="fas fa-virus-slash text-xl opacity-50"></i>
-                <span class="text-[9px] font-bold uppercase tracking-widest">Removes Bacteria & Viruses</span>
+                <span class="text-[9px] font-bold uppercase tracking-widest">Keills Germs & Allergens</span>
             </div>
             <div class="flex flex-col items-center gap-2">
-                <i class="fas fa-leaf text-xl opacity-50"></i>
-                <span class="text-[9px] font-bold uppercase tracking-widest">100% Chemical-Free</span>
+                <i class="fas fa-spray-can text-xl opacity-50"></i>
+                <span class="text-[9px] font-bold uppercase tracking-widest">No Spray. No Fumes.</span>
             </div>
             <div class="flex flex-col items-center gap-2">
-                <i class="fas fa-remote-control text-xl opacity-50"></i>
-                <span class="text-[9px] font-bold uppercase tracking-widest">Auto Shut-off Remote</span>
+                <i class="fas fa-stopwatch text-xl opacity-50"></i>
+                <span class="text-[9px] font-bold uppercase tracking-widest">Auto Timer Safety</span>
             </div>
             <div class="flex flex-col items-center gap-2">
-                <i class="fas fa-th text-xl opacity-50"></i>
-                <span class="text-[9px] font-bold uppercase tracking-widest">Safe For All Surfaces</span>
+                <i class="fas fa-expand-arrows-alt text-xl opacity-50"></i>
+                <span class="text-[9px] font-bold uppercase tracking-widest">360° Light Coverage</span>
             </div>
         </div>
 
-        <!-- HOW IT WORKS SECTION -->
+        <!-- PROBLEM & SOLUTION SECTION -->
         <section class="py-20 px-6 bg-brand-gray/30">
             <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl md:text-5xl font-black mb-16 tracking-tight">Professional Sanitization at Home</h2>
+                <h2 class="text-3xl md:text-5xl font-black mb-16 tracking-tight text-brand-blue">Professional Room Sanitization</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div class="bg-white p-8 rounded-[2rem] shadow-sm text-left border border-gray-100">
                         <div class="text-red-500 font-black mb-4 uppercase tracking-widest text-xs">The Problem</div>
-                        <h3 class="text-xl font-bold mb-4">Hidden Germs</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed">Standard cleaning often leaves behind 90% of bacteria and viruses hidden in porous surfaces or hard-to-reach corners, posing a constant risk to your family's health.</p>
+                        <h3 class="text-xl font-bold mb-4">Hidden Pathogens</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed italic">Hidden germs collect on worktops, furniture, switches and electronics—even after manual cleaning.</p>
                     </div>
                     <div class="bg-white p-8 rounded-[2rem] shadow-sm text-left border-2 border-brand-blue">
                         <div class="text-brand-blue font-black mb-4 uppercase tracking-widest text-xs">The Solution</div>
-                        <h3 class="text-xl font-bold mb-4">ClairLite Power</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed">Utilizing advanced technology, ClairLite neutralizes pathogens at the molecular level. It reaches everywhere light can touch, ensuring a truly clinical clean without any toxic residue.</p>
+                        <h3 class="text-xl font-bold mb-4">ClairLite™ Power</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Powerful UV-C light reduces microorganisms on exposed surfaces without chemicals, residues, or manual effort. Simply turn it on and leave—ClairLite does the rest.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold mb-4">1</div>
+                        <p class="text-sm font-bold">Place in Room</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold mb-4">2</div>
+                        <p class="text-sm font-bold">Exit & Activate</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold mb-4">3</div>
+                        <p class="text-sm font-bold">Return to Safe Air</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- COUNTRY SELECTOR GROUPED BY REGION -->
+        <!-- HUB SELECTOR -->
         <section id="cta-options" class="px-6 py-20 bg-white">
             <div class="text-center mb-16">
                 <span class="bg-brand-blue/10 text-brand-blue text-[10px] font-black px-4 py-2 rounded-full uppercase tracking-[0.3em]">Global Logistics</span>
-                <h2 class="text-3xl md:text-5xl font-black mt-6 mb-4 tracking-tight">Select Your Shipping Destination</h2>
-                <p class="text-gray-500">Inventory is reserved for the following primary regions:</p>
+                <h2 class="text-3xl md:text-5xl font-black mt-6 mb-4 tracking-tight">Select Your Shipping Hub</h2>
+                <p class="text-gray-500">Fast delivery is reserved for the following primary regions:</p>
             </div>
 
             <div class="max-w-5xl mx-auto space-y-12">
@@ -224,7 +263,7 @@
 
                         shippingHubs.forEach(c => {
                             document.write(`
-                                <a href="${c.url}" class="benefit-card bg-brand-gray/40 p-6 rounded-2xl border-2 border-transparent hover:border-brand-blue flex flex-col items-center gap-3 transition-all no-underline group">
+                                <a href="${c.url}" class="benefit-card bg-brand-gray/40 p-6 rounded-2xl border-2 border-brand-blue/10 flex flex-col items-center gap-3 no-underline group">
                                     <img src="https://flagcdn.com/w80/${c.code}.png" class="w-10 shadow-sm rounded-sm" alt="${c.name}">
                                     <span class="font-black text-[11px] text-gray-900 uppercase tracking-widest group-hover:text-brand-blue text-center">${c.name}</span>
                                 </a>
@@ -246,28 +285,28 @@
         <!-- FAQ SECTION -->
         <section class="py-20 px-6 bg-brand-gray/20 border-t border-gray-100">
             <div class="max-w-3xl mx-auto">
-                <h2 class="text-3xl font-black mb-10 text-center">Frequently Asked Questions</h2>
+                <h2 class="text-3xl font-black mb-10 text-center text-brand-blue">FAQ</h2>
                 <div class="space-y-4">
                     <details class="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 cursor-pointer">
                         <summary class="flex justify-between items-center font-bold text-gray-900">
-                            Is ClairLite safe to use around furniture?
+                            Where can I use ClairLite™?
                             <i class="fas fa-plus text-xs transition-transform group-open:rotate-45"></i>
                         </summary>
-                        <p class="mt-4 text-sm text-gray-500 leading-relaxed">Yes, ClairLite is 100% chemical-free and safe for all surfaces, including wood, fabrics, and electronics. It leaves no residue behind.</p>
+                        <p class="mt-4 text-sm text-gray-500 leading-relaxed">It is suitable for any indoor room. It works safely on furniture, textiles, light switches, and electronic devices where manual wiping is difficult.</p>
                     </details>
                     <details class="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 cursor-pointer">
                         <summary class="flex justify-between items-center font-bold text-gray-900">
-                            Does it really kill 99.99% of germs?
+                            Is it safe for pets and plants?
                             <i class="fas fa-plus text-xs transition-transform group-open:rotate-45"></i>
                         </summary>
-                        <p class="mt-4 text-sm text-gray-500 leading-relaxed">Absolutely. ClairLite's technology is scientifically proven to neutralize bacteria, viruses, and mold spores effectively in minutes.</p>
+                        <p class="mt-4 text-sm text-gray-500 leading-relaxed">While active, all humans, pets, and plants should leave the room. The built-in timer and remote control make it easy to manage safely.</p>
                     </details>
                     <details class="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 cursor-pointer">
                         <summary class="flex justify-between items-center font-bold text-gray-900">
-                            What is the return policy?
+                            Does it require refills?
                             <i class="fas fa-plus text-xs transition-transform group-open:rotate-45"></i>
                         </summary>
-                        <p class="mt-4 text-sm text-gray-500 leading-relaxed">We offer a 30-day money-back guarantee. If you're not completely satisfied with your sanitization results, contact our support for a hassle-free refund.</p>
+                        <p class="mt-4 text-sm text-gray-500 leading-relaxed">No. ClairLite™ is a one-time purchase. There are no sprays to refill and no recurring costs for cleaning supplies.</p>
                     </details>
                 </div>
             </div>
@@ -286,7 +325,7 @@
             </nav>
 
             <div class="max-w-4xl mx-auto space-y-4 opacity-40 text-[9px] leading-relaxed">
-                <p><strong>Disclaimer:</strong> ClairLite is a sanitization device. Always follow safety instructions provided in the manual. Results may vary depending on usage environment.</p>
+                <p><strong>Safety Disclaimer:</strong> Always follow safety instructions. Do not look directly at the light while active. ClairLite™ is a sanitization device intended for household surface disinfection.</p>
                 <p>© 2026 ClairLite™ Global Operations. Authorized Distributor. 18627 Brookhurst St #1300 Fountain Valley CA 92708.</p>
             </div>
         </footer>
@@ -298,7 +337,7 @@
                     <i class="fas fa-times text-xl"></i>
                 </button>
                 <div id="modal-content" class="p-10 overflow-y-auto text-sm text-gray-700 leading-relaxed">
-                    <!-- Dynamic Content -->
+                    <!-- Content injected here -->
                 </div>
             </div>
         </div>
@@ -321,11 +360,11 @@
 
         // Modal Logic
         const modalData = {
-            'privacy': `<h2 class="text-2xl font-black mb-6">Privacy Policy</h2><p>Your privacy is paramount. We use your data strictly for order processing and secure logistics...</p>`,
-            'terms': `<h2 class="text-2xl font-black mb-6">Terms of Service</h2><p>By purchasing ClairLite, you agree to our standard terms of sale and global logistics agreements...</p>`,
-            'shipping': `<h2 class="text-2xl font-black mb-6">Shipping Information</h2><p>Global shipping typically takes between 3 to 10 business days. Full tracking provided via email.</p>`,
-            'returns': `<h2 class="text-2xl font-black mb-6">30-Day Guarantee</h2><p>Try ClairLite for 30 days. If you are not satisfied with the results, return the device for a full refund of the product price.</p>`,
-            'contact': `<h2 class="text-2xl font-black mb-6">Global Support</h2><p>Email: support@vivellify-support.com<br>Phone: +49 40 7430 2972</p>`
+            'privacy': `<h2 class="text-2xl font-black mb-6">Privacy Policy</h2><p>Your privacy is important to us. We use your data strictly for order fulfillment and internal logistics tracking...</p>`,
+            'terms': `<h2 class="text-2xl font-black mb-6">Terms of Service</h2><p>By purchasing ClairLite™, you agree to our standard terms of sale and safety guidelines for UV-C usage...</p>`,
+            'shipping': `<h2 class="text-2xl font-black mb-6">Shipping</h2><p>International shipping typically takes 3 to 10 business days. Tracking numbers are provided upon dispatch.</p>`,
+            'returns': `<h2 class="text-2xl font-black mb-6">30-Day Guarantee</h2><p>Try ClairLite™ for 30 days. If you are not satisfied with your home sanitization results, return it for a refund.</p>`,
+            'contact': `<h2 class="text-2xl font-black mb-6">Support</h2><p>Email: support@vivellify-support.com<br>Phone: +49 40 7430 2972</p>`
         };
 
         function openModal(type) {
