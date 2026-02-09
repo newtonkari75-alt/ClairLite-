@@ -23,8 +23,8 @@
     <!-- ============================================== -->
     <!-- 2. SEO META TAGS -->
     <!-- ============================================== -->
-    <title>ClairLite™ | Professional Home UV-C Sanitization (70% OFF)</title>
-    <meta name="description" content="Sanitize every inch of your home in minutes with ClairLite™. Reduces 99.99% of germs, bacteria, and allergens using 100% chemical-free UV-C light.">
+    <title>ClairLite™ | Advanced Home UV-C Sanitization Technology (70% OFF)</title>
+    <meta name="description" content="Sanitize every inch of your home in minutes with ClairLite™. Kills 99.99% of germs, bacteria, and allergens using 100% chemical-free UV-C light technology.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -36,6 +36,7 @@
             top: 0 !important; 
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
+            background-color: #E9E9E9;
         }
         
         /* ClairLite Brand Colors */
@@ -57,137 +58,145 @@
         .logo-light { filter: brightness(0) invert(1); }
 
         .headline-fluid {
-            font-size: clamp(1.75rem, 5vw, 3.25rem);
+            font-size: clamp(1.85rem, 5.5vw, 3.5rem);
             line-height: 1.1;
         }
 
         .benefit-card {
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .benefit-card:hover {
             transform: translateY(-5px);
             border-color: #012468 !important;
             background-color: #ffffff;
-            box-shadow: 0 10px 30px rgba(1, 36, 104, 0.1);
+            box-shadow: 0 20px 40px rgba(1, 36, 104, 0.12);
         }
 
-        .modal-content-text h2 { @apply text-2xl font-black mb-6 text-brand-blue; }
-        .modal-content-text h3 { @apply text-lg font-bold mt-8 mb-4 text-gray-800 uppercase tracking-tighter; }
-        .modal-content-text p { @apply mb-4 text-gray-600 leading-relaxed; }
-        .modal-content-text ul { @apply list-disc pl-5 mb-4 text-gray-600 space-y-2; }
-        .modal-content-text strong { @apply text-gray-900 font-bold; }
+        /* Clean translation-ready layout */
+        .modal-content-text h2 { font-size: 1.5rem; font-weight: 900; margin-bottom: 1.5rem; color: #012468; text-transform: uppercase; }
+        .modal-content-text h3 { font-size: 1.125rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #111827; }
+        .modal-content-text p { margin-bottom: 1rem; color: #4B5563; line-height: 1.6; }
+        .modal-content-text ul { list-style-type: disc; padding-left: 1.25rem; margin-bottom: 1rem; color: #4B5563; }
+        .modal-content-text li { margin-bottom: 0.5rem; }
     </style>
 </head>
-<body class="bg-brand-gray text-gray-900">
+<body class="text-gray-900">
 
     <div class="w-full lg:max-w-[1440px] mx-auto bg-brand-white shadow-2xl relative overflow-hidden">
         
         <!-- TOP ANNOUNCEMENT BAR -->
-        <div class="bg-brand-gray py-2 px-4 border-b border-gray-200">
-            <div class="flex justify-center items-center gap-4 md:gap-12">
+        <div class="bg-brand-gray py-2.5 px-4 border-b border-gray-200">
+            <div class="flex justify-center items-center gap-4 md:gap-16">
                 <div class="flex items-center gap-2">
-                    <i class="fas fa-truck text-[10px] text-brand-blue"></i>
-                    <span class="text-[9px] font-bold text-gray-700 uppercase tracking-widest">FREE GLOBAL SHIPPING</span>
+                    <i class="fas fa-truck-fast text-[10px] text-brand-blue"></i>
+                    <span class="text-[9px] font-extrabold text-gray-700 uppercase tracking-widest">FREE GLOBAL SHIPPING</span>
                 </div>
                 <div class="w-px h-3 bg-gray-300"></div>
                 <div class="flex items-center gap-2">
                     <i class="fas fa-shield-check text-[10px] text-brand-blue"></i>
-                    <span class="text-[9px] font-bold text-gray-700 uppercase tracking-widest">30-DAY GUARANTEE</span>
+                    <span class="text-[9px] font-extrabold text-gray-700 uppercase tracking-widest">30-DAY MONEY-BACK GUARANTEE</span>
                 </div>
             </div>
         </div>
 
         <!-- HEADER -->
-        <header class="py-4 px-6 bg-brand-blue flex justify-center items-center sticky top-0 z-50">
-            <img src="images/clearlite-logo.svg" alt="ClairLite Logo" class="h-7 md:h-9 logo-light" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
-            <span class="hidden text-white font-black text-xl tracking-tighter">CLAIRLITE™</span>
+        <header class="py-5 px-6 bg-brand-blue flex justify-center items-center sticky top-0 z-50 shadow-md">
+            <img src="images/clearlite-logo.svg" alt="ClairLite™ Logo" class="h-8 md:h-10 logo-light" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            <span class="hidden text-white font-black text-2xl tracking-tighter">CLAIRLITE™</span>
         </header>
 
         <!-- FLASH SALE BANNER -->
-        <div class="bg-black text-white text-center py-2.5 px-4 border-b border-white/10">
-            <span class="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.2em]">
-                FLASH SALE: 70% DISCOUNT UNTIL <span id="current-date" class="underline decoration-yellow-400">TODAY</span>
+        <div class="bg-black text-white text-center py-3 px-4">
+            <span class="text-[10px] sm:text-[12px] font-black uppercase tracking-[0.25em]">
+                ⚡ FLASH SALE: <span class="text-yellow-400">70% DISCOUNT</span> EXPIRES <span id="current-date" class="underline decoration-yellow-400">TODAY</span>
             </span>
         </div>
 
-        <!-- HERO SECTION (FIRST SESSION) -->
-        <section class="px-6 py-12 lg:px-24 lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left">
-                <div class="flex items-center gap-2 mb-6">
+        <!-- HERO SECTION -->
+        <section class="px-6 py-12 lg:px-24 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center bg-white">
+            <div class="order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left animate-fade-in-up">
+                <div class="flex items-center gap-2 mb-8 bg-brand-gray/50 px-4 py-1.5 rounded-full">
                     <div class="flex text-yellow-500 text-[10px] gap-0.5">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <span class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">4.7 | 1,000+ Verified Reviews</span>
+                    <span class="text-[10px] text-brand-blue font-black uppercase tracking-widest">4.7 | 1,000+ VERIFIED CUSTOMER REVIEWS</span>
                 </div>
                 
-                <h1 class="headline-fluid font-black text-gray-900 mb-6">
-                    Sanitize Every Inch of Your Home <span class="text-brand-blue italic underline decoration-brand-blue/20">in Minutes with ClairLite™</span>
+                <h1 class="headline-fluid font-black text-gray-900 mb-8">
+                    Deep Sanitize Every Corner of Your Home <span class="text-brand-blue italic decoration-brand-blue/20">in Minutes with ClairLite™</span>
                 </h1>
 
-                <p class="text-lg text-gray-600 font-medium mb-8 leading-relaxed max-w-xl">
-                    Reduces up to 99.99% of common household germs—completely without scrubbing. Effortless professional room disinfection for your family.
+                <p class="text-lg md:text-xl text-gray-600 font-medium mb-10 leading-relaxed max-w-xl">
+                    Clinically-proven to eliminate up to 99.99% of bacteria, viruses, and allergens. Achieve a professional-grade clean with zero chemicals and zero manual labor.
                 </p>
 
-                <div class="space-y-3 mb-8 text-left w-full max-w-md mx-auto lg:mx-0">
-                    <div class="flex items-center gap-3">
-                        <i class="fas fa-check-circle text-green-500 text-sm"></i>
-                        <span class="text-sm font-semibold text-gray-700">Removes bacteria & allergens from surfaces</span>
+                <div class="space-y-4 mb-10 text-left w-full max-w-md">
+                    <div class="flex items-center gap-4 group">
+                        <div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                            <i class="fas fa-check text-green-600 text-[10px]"></i>
+                        </div>
+                        <span class="text-sm font-bold text-gray-700">100% Chemical-Free UV-C Light Technology</span>
                     </div>
-                    <div class="flex items-center gap-3">
-                        <i class="fas fa-check-circle text-green-500 text-sm"></i>
-                        <span class="text-sm font-semibold text-gray-700">100% chemical-free UV-C disinfection</span>
+                    <div class="flex items-center gap-4 group">
+                        <div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                            <i class="fas fa-check text-green-600 text-[10px]"></i>
+                        </div>
+                        <span class="text-sm font-bold text-gray-700">Safe for Furniture, Bedding & Electronics</span>
                     </div>
-                    <div class="flex items-center gap-3">
-                        <i class="fas fa-check-circle text-green-500 text-sm"></i>
-                        <span class="text-sm font-semibold text-gray-700">Remote control with auto shut-off</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <i class="fas fa-check-circle text-green-500 text-sm"></i>
-                        <span class="text-sm font-semibold text-gray-700">Safe for furniture, textiles & electronics</span>
-                    </div>
-                </div>
-
-                <div class="bg-green-50 text-green-700 px-4 py-3 rounded-xl border border-green-100 mb-8 flex flex-col md:flex-row gap-4 items-center justify-center lg:justify-start w-full">
-                    <div class="flex items-center gap-2">
-                        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                        <span class="text-[11px] font-bold uppercase tracking-wider">8,000+ happy customers</span>
-                    </div>
-                    <div class="hidden md:block w-px h-4 bg-green-200"></div>
-                    <div class="flex items-center gap-2">
-                        <span class="text-[11px] font-bold uppercase tracking-wider">🟢 In Stock - Limited Supply</span>
+                    <div class="flex items-center gap-4 group">
+                        <div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                            <i class="fas fa-check text-green-600 text-[10px]"></i>
+                        </div>
+                        <span class="text-sm font-bold text-gray-700">Remote Control with Intelligent Auto Shut-off</span>
                     </div>
                 </div>
 
-                <div class="w-full flex flex-col gap-4">
-                    <button onclick="scrollToSelector()" class="bg-brand-blue text-white text-lg font-black py-5 px-10 rounded-2xl shadow-xl hover:scale-[1.02] transition-all uppercase tracking-wider flex items-center justify-center gap-4">
-                        CLAIM MY 70% DISCOUNT NOW <i class="fas fa-arrow-right text-sm"></i>
+                <div class="bg-green-50 text-green-700 px-5 py-4 rounded-2xl border border-green-100 mb-10 flex flex-col md:flex-row gap-5 items-center justify-center lg:justify-start w-full">
+                    <div class="flex items-center gap-3">
+                        <div class="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></div>
+                        <span class="text-[11px] font-black uppercase tracking-wider">8,000+ Homes Protected</span>
+                    </div>
+                    <div class="hidden md:block w-px h-5 bg-green-200"></div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-warehouse text-xs"></i>
+                        <span class="text-[11px] font-black uppercase tracking-wider">In Stock: Local Hub Delivery</span>
+                    </div>
+                </div>
+
+                <div class="w-full flex flex-col gap-5">
+                    <button onclick="scrollToSelector()" class="bg-brand-blue text-white text-xl font-black py-6 px-12 rounded-2xl shadow-[0_20px_40px_rgba(1,36,104,0.25)] hover:scale-[1.03] active:scale-95 transition-all uppercase tracking-widest flex items-center justify-center gap-5 group">
+                        GET MY 70% DISCOUNT NOW <i class="fas fa-arrow-right text-sm group-hover:translate-x-2 transition-transform"></i>
                     </button>
-                    <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest flex items-center justify-center lg:justify-start gap-2">
-                        <i class="fas fa-lock"></i> Secure 256-bit Encrypted Checkout
-                    </p>
+                    <div class="flex items-center justify-center lg:justify-start gap-3 opacity-60">
+                        <i class="fas fa-lock text-[10px]"></i>
+                        <span class="text-[10px] font-bold uppercase tracking-widest">Bank-Grade 256-bit Encrypted Checkout</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="order-1 lg:order-2 flex justify-center animate-fade-in-up">
-                <div class="relative w-full max-w-md flex items-center justify-center">
-                    <video autoplay muted loop playsinline class="w-full h-auto object-contain drop-shadow-2xl z-10 rounded-3xl" poster="images/clearlite-logo.svg">
-                        <source src="images/clearlite.mp4" type="video/mp4">
-                    </video>
+            <div class="order-1 lg:order-2 flex justify-center">
+                <div class="relative w-full max-w-lg">
+                    <!-- Premium Video Frame -->
+                    <div class="rounded-[2.5rem] overflow-hidden shadow-2xl border-[12px] border-brand-gray">
+                        <video autoplay muted loop playsinline class="w-full h-auto object-cover" poster="images/clearlite-logo.svg">
+                            <source src="images/clearlite.mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- COUNTRY SELECTOR (SECOND SESSION) -->
-        <section id="cta-options" class="px-6 py-20 bg-brand-gray/20 border-y border-gray-100">
-            <div class="text-center mb-16">
-                <span class="bg-brand-blue/10 text-brand-blue text-[10px] font-black px-4 py-2 rounded-full uppercase tracking-[0.3em]">Global Logistics</span>
-                <h2 class="text-3xl md:text-5xl font-black mt-6 mb-4 tracking-tight text-brand-blue">Select Your Shipping Hub</h2>
-                <p class="text-gray-500">Fast delivery is reserved for the following primary regions:</p>
+        <section id="cta-options" class="px-6 py-24 bg-brand-gray/30 border-y border-gray-100">
+            <div class="text-center mb-20 max-w-3xl mx-auto px-4">
+                <span class="bg-brand-blue/10 text-brand-blue text-[10px] font-black px-5 py-2 rounded-full uppercase tracking-[0.4em] mb-8 inline-block">Direct Global Logistics</span>
+                <h2 class="text-4xl md:text-6xl font-black mb-6 tracking-tight text-gray-900">Select Your Shipping Hub</h2>
+                <p class="text-gray-500 font-medium text-lg">Fast localized delivery is strictly reserved for the following primary regions. Choose your destination to secure your discount.</p>
             </div>
 
-            <div class="max-w-5xl mx-auto">
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                     <script>
                         const base = "https://www.fasttrack37.com/PM7HK3TH/2SQ13739/";
                         const regions = {
@@ -202,21 +211,27 @@
                         };
 
                         const shippingHubs = [
-                            { name: 'United States', code: 'us', url: regions.US },
-                            { name: 'United Kingdom', code: 'gb', url: regions.UK },
-                            { name: 'Canada', code: 'ca', url: regions.CA },
-                            { name: 'Germany', code: 'de', url: regions.DE },
-                            { name: 'France', code: 'fr', url: regions.FR },
-                            { name: 'Netherlands', code: 'nl', url: regions.NL },
-                            { name: 'Rest of Europe', code: 'eu', url: regions.EU },
-                            { name: 'International', code: 'un', url: regions.GLOBAL }
+                            { name: 'United States', code: 'us', url: regions.US, tag: 'Next Day Dispatch' },
+                            { name: 'United Kingdom', code: 'gb', url: regions.UK, tag: 'Express Delivery' },
+                            { name: 'Canada', code: 'ca', url: regions.CA, tag: 'Standard Shipping' },
+                            { name: 'Germany', code: 'de', url: regions.DE, tag: 'Lokale Lieferung' },
+                            { name: 'France', code: 'fr', url: regions.FR, tag: 'Envoi Rapide' },
+                            { name: 'Netherlands', code: 'nl', url: regions.NL, tag: 'Snelle Levering' },
+                            { name: 'Rest of Europe', code: 'eu', url: regions.EU, tag: 'Regional Hub' },
+                            { name: 'International', code: 'un', url: regions.GLOBAL, tag: 'Worldwide' }
                         ];
 
                         shippingHubs.forEach(c => {
                             document.write(`
-                                <a href="${c.url}" class="benefit-card bg-white p-6 rounded-2xl border-2 border-brand-blue/10 flex flex-col items-center gap-3 no-underline group shadow-sm">
-                                    <img src="https://flagcdn.com/w80/${c.code}.png" class="w-10 shadow-sm rounded-sm" alt="${c.name}">
-                                    <span class="font-black text-[11px] text-gray-900 uppercase tracking-widest group-hover:text-brand-blue text-center">${c.name}</span>
+                                <a href="${c.url}" class="benefit-card bg-white p-8 rounded-3xl border-2 border-brand-blue/5 flex flex-col items-center gap-5 no-underline group shadow-sm">
+                                    <div class="relative">
+                                        <img src="https://flagcdn.com/w80/${c.code}.png" class="w-12 shadow-md rounded-lg" alt="${c.name}">
+                                        <div class="absolute -inset-2 bg-brand-blue/5 rounded-full scale-150 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <span class="block font-black text-[13px] text-gray-900 uppercase tracking-widest group-hover:text-brand-blue mb-1">${c.name}</span>
+                                        <span class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">${c.tag}</span>
+                                    </div>
                                 </a>
                             `);
                         });
@@ -224,133 +239,147 @@
                 </div>
             </div>
             
-            <div class="mt-16 flex justify-center flex-wrap gap-8 opacity-40 grayscale">
-                <i class="fab fa-cc-visa text-2xl"></i>
-                <i class="fab fa-cc-mastercard text-2xl"></i>
-                <i class="fab fa-cc-paypal text-2xl"></i>
-                <i class="fab fa-apple-pay text-2xl"></i>
-                <i class="fab fa-google-pay text-2xl"></i>
+            <div class="mt-24 flex justify-center flex-wrap gap-12 opacity-30 grayscale hover:opacity-60 transition-opacity">
+                <i class="fab fa-cc-visa text-3xl"></i>
+                <i class="fab fa-cc-mastercard text-3xl"></i>
+                <i class="fab fa-cc-paypal text-3xl"></i>
+                <i class="fab fa-apple-pay text-3xl"></i>
+                <i class="fab fa-google-pay text-3xl"></i>
             </div>
         </section>
 
         <!-- WHY CLAIRLITE STRIP -->
-        <div class="bg-brand-blue py-6 px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-white text-center">
-            <div class="flex flex-col items-center gap-2">
-                <i class="fas fa-virus-slash text-xl opacity-50"></i>
-                <span class="text-[9px] font-bold uppercase tracking-widest">Kills Germs & Allergens</span>
+        <div class="bg-brand-blue py-10 px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-white text-center">
+            <div class="flex flex-col items-center gap-3">
+                <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-2">
+                    <i class="fas fa-virus-slash text-xl text-brand-gray"></i>
+                </div>
+                <span class="text-[10px] font-black uppercase tracking-widest">Kills Germs & Allergens</span>
             </div>
-            <div class="flex flex-col items-center gap-2">
-                <i class="fas fa-spray-can text-xl opacity-50"></i>
-                <span class="text-[9px] font-bold uppercase tracking-widest">No Spray. No Fumes.</span>
+            <div class="flex flex-col items-center gap-3">
+                <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-2">
+                    <i class="fas fa-spray-can text-xl text-brand-gray"></i>
+                </div>
+                <span class="text-[10px] font-black uppercase tracking-widest">No Toxic Chemicals</span>
             </div>
-            <div class="flex flex-col items-center gap-2">
-                <i class="fas fa-stopwatch text-xl opacity-50"></i>
-                <span class="text-[9px] font-bold uppercase tracking-widest">Auto Timer Safety</span>
+            <div class="flex flex-col items-center gap-3">
+                <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-2">
+                    <i class="fas fa-stopwatch text-xl text-brand-gray"></i>
+                </div>
+                <span class="text-[10px] font-black uppercase tracking-widest">Automatic Safety Timer</span>
             </div>
-            <div class="flex flex-col items-center gap-2">
-                <i class="fas fa-expand-arrows-alt text-xl opacity-50"></i>
-                <span class="text-[9px] font-bold uppercase tracking-widest">360° Light Coverage</span>
+            <div class="flex flex-col items-center gap-3">
+                <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-2">
+                    <i class="fas fa-expand-arrows-alt text-xl text-brand-gray"></i>
+                </div>
+                <span class="text-[10px] font-black uppercase tracking-widest">360° Light Coverage</span>
             </div>
         </div>
 
         <!-- PROBLEM & SOLUTION SECTION -->
-        <section class="py-20 px-6 bg-brand-white">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl md:text-5xl font-black mb-16 tracking-tight text-brand-blue">Professional Room Sanitization</h2>
+        <section class="py-24 px-6 bg-brand-white">
+            <div class="max-w-5xl mx-auto text-center">
+                <h2 class="text-4xl md:text-6xl font-black mb-20 tracking-tight text-brand-blue">Professional Grade Sanitization</h2>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-                    <div class="bg-white p-8 rounded-[2rem] shadow-sm text-left border border-gray-100 benefit-card">
-                        <div class="text-red-500 font-black mb-4 uppercase tracking-widest text-xs">The Problem</div>
-                        <h3 class="text-xl font-bold mb-4 text-gray-900">Hidden Pathogens</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed">Hidden germs accumulate on countertops, furniture, switches, and electronics, even after manual cleaning.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
+                    <div class="bg-brand-gray/20 p-10 rounded-[2.5rem] text-left border border-gray-100 benefit-card">
+                        <div class="text-red-600 font-black mb-5 uppercase tracking-widest text-xs flex items-center gap-3">
+                            <span class="w-2 h-2 bg-red-600 rounded-full"></span> The Problem
+                        </div>
+                        <h3 class="text-2xl font-black mb-6 text-gray-900">Hidden Microbial Threats</h3>
+                        <p class="text-gray-500 text-base leading-relaxed">Bacteria, viruses, and mold collect on high-touch surfaces like worktops, remote controls, and light switches—even after a traditional manual wipe-down.</p>
                     </div>
-                    <div class="bg-white p-8 rounded-[2rem] shadow-sm text-left border-2 border-brand-blue benefit-card">
-                        <div class="text-brand-blue font-black mb-4 uppercase tracking-widest text-xs">The Solution</div>
-                        <h3 class="text-xl font-bold mb-4 text-brand-blue">ClairLite™ Power</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed">Powerful UV-C light reduces microorganisms on exposed surfaces without chemicals, residues, or manual effort. Simply turn it on and let it work — ClairLite does the rest.</p>
+                    <div class="bg-white p-10 rounded-[2.5rem] text-left border-2 border-brand-blue benefit-card shadow-lg">
+                        <div class="text-brand-blue font-black mb-5 uppercase tracking-widest text-xs flex items-center gap-3">
+                            <span class="w-2 h-2 bg-brand-blue rounded-full"></span> The Solution
+                        </div>
+                        <h3 class="text-2xl font-black mb-6 text-brand-blue">ClairLite™ Power</h3>
+                        <p class="text-gray-600 text-base leading-relaxed">High-intensity UV-C light neutralizes microorganisms at the molecular level without toxic residues or effort. Turn it on, step out, and let science handle the sanitizing.</p>
                     </div>
                 </div>
 
-                <!-- Passos 1-2-3 -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="flex flex-col items-center p-6 bg-brand-gray/30 rounded-3xl border border-gray-100 shadow-sm benefit-card">
-                        <div class="w-14 h-14 bg-brand-blue text-white rounded-full flex items-center justify-center font-black text-xl mb-6 shadow-lg shadow-brand-blue/20">1</div>
-                        <h4 class="text-lg font-black text-brand-blue mb-2 uppercase tracking-tighter">Place in Room</h4>
-                        <p class="text-gray-400 text-sm font-medium">Position the device centrally.</p>
+                <!-- Three Steps to Pure Air -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 relative">
+                    <div class="hidden md:block absolute top-12 left-1/4 right-1/4 h-px border-t border-dashed border-brand-blue/20 -z-10"></div>
+                    
+                    <div class="flex flex-col items-center p-8 bg-brand-gray/30 rounded-[2rem] benefit-card">
+                        <div class="w-16 h-16 bg-brand-blue text-white rounded-full flex items-center justify-center font-black text-2xl mb-8 shadow-xl">1</div>
+                        <h4 class="text-lg font-black text-brand-blue mb-3 uppercase tracking-tighter">Place in Room</h4>
+                        <p class="text-gray-500 text-sm font-medium">Position centrally for full coverage.</p>
                     </div>
-                    <div class="flex flex-col items-center p-6 bg-brand-gray/30 rounded-3xl border border-gray-100 shadow-sm benefit-card">
-                        <div class="w-14 h-14 bg-brand-blue text-white rounded-full flex items-center justify-center font-black text-xl mb-6 shadow-lg shadow-brand-blue/20">2</div>
-                        <h4 class="text-lg font-black text-brand-blue mb-2 uppercase tracking-tighter">Exit & Activate</h4>
-                        <p class="text-gray-400 text-sm font-medium">Leave the room and use remote.</p>
+                    <div class="flex flex-col items-center p-8 bg-brand-gray/30 rounded-[2rem] benefit-card">
+                        <div class="w-16 h-16 bg-brand-blue text-white rounded-full flex items-center justify-center font-black text-2xl mb-8 shadow-xl">2</div>
+                        <h4 class="text-lg font-black text-brand-blue mb-3 uppercase tracking-tighter">Exit & Activate</h4>
+                        <p class="text-gray-500 text-sm font-medium">Use the remote and leave the room.</p>
                     </div>
-                    <div class="flex flex-col items-center p-6 bg-brand-gray/30 rounded-3xl border border-gray-100 shadow-sm benefit-card">
-                        <div class="w-14 h-14 bg-brand-blue text-white rounded-full flex items-center justify-center font-black text-xl mb-6 shadow-lg shadow-brand-blue/20">3</div>
-                        <h4 class="text-lg font-black text-brand-blue mb-2 uppercase tracking-tighter">Return to Safe Air</h4>
-                        <p class="text-gray-400 text-sm font-medium">Enjoy a clinically clean space.</p>
+                    <div class="flex flex-col items-center p-8 bg-brand-gray/30 rounded-[2rem] benefit-card">
+                        <div class="w-16 h-16 bg-brand-blue text-white rounded-full flex items-center justify-center font-black text-2xl mb-8 shadow-xl">3</div>
+                        <h4 class="text-lg font-black text-brand-blue mb-3 uppercase tracking-tighter">Pure Safety</h4>
+                        <p class="text-gray-500 text-sm font-medium">Return to a clinically sanitized space.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- FAQ SECTION -->
-        <section class="py-20 px-6 bg-brand-gray/20 border-t border-gray-100">
+        <section class="py-24 px-6 bg-brand-gray/20 border-t border-gray-100">
             <div class="max-w-3xl mx-auto">
-                <h2 class="text-3xl font-black mb-10 text-center text-brand-blue">FAQ</h2>
-                <div class="space-y-4">
-                    <details class="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 cursor-pointer">
-                        <summary class="flex justify-between items-center font-bold text-gray-900">
-                            Where can I use ClairLite™?
+                <h2 class="text-4xl font-black mb-12 text-center text-brand-blue tracking-tight">Frequently Asked Questions</h2>
+                <div class="space-y-5">
+                    <details class="group bg-white rounded-3xl p-8 shadow-sm border border-gray-100 cursor-pointer overflow-hidden transition-all">
+                        <summary class="flex justify-between items-center font-black text-gray-900 list-none">
+                            Where is ClairLite™ most effective?
                             <i class="fas fa-plus text-xs transition-transform group-open:rotate-45"></i>
                         </summary>
-                        <p class="mt-4 text-sm text-gray-500 leading-relaxed">It is suitable for any indoor room. It works safely on furniture, textiles, light switches, and electronic devices where manual wiping is difficult.</p>
+                        <p class="mt-6 text-gray-600 leading-relaxed font-medium">ClairLite™ is designed for any indoor environment. It is exceptionally effective in bedrooms, kitchens, and living areas where standard cleaning might miss porous surfaces or complex electronics.</p>
                     </details>
-                    <details class="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 cursor-pointer">
-                        <summary class="flex justify-between items-center font-bold text-gray-900">
-                            Is it safe for pets and plants?
+                    <details class="group bg-white rounded-3xl p-8 shadow-sm border border-gray-100 cursor-pointer overflow-hidden transition-all">
+                        <summary class="flex justify-between items-center font-black text-gray-900 list-none">
+                            Is it safe for residents and pets?
                             <i class="fas fa-plus text-xs transition-transform group-open:rotate-45"></i>
                         </summary>
-                        <p class="mt-4 text-sm text-gray-500 leading-relaxed">While active, all humans, pets, and plants should leave the room. The built-in timer and remote control make it easy to manage safely.</p>
+                        <p class="mt-6 text-gray-600 leading-relaxed font-medium">Safety is our priority. While the device is active, humans, pets, and plants must remain out of the room. The built-in delay timer and remote control allow you to manage this safely and easily.</p>
                     </details>
-                    <details class="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 cursor-pointer">
-                        <summary class="flex justify-between items-center font-bold text-gray-900">
-                            Does it require refills?
+                    <details class="group bg-white rounded-3xl p-8 shadow-sm border border-gray-100 cursor-pointer overflow-hidden transition-all">
+                        <summary class="flex justify-between items-center font-black text-gray-900 list-none">
+                            Does this require any filters or refills?
                             <i class="fas fa-plus text-xs transition-transform group-open:rotate-45"></i>
                         </summary>
-                        <p class="mt-4 text-sm text-gray-500 leading-relaxed">No. ClairLite™ is a one-time purchase. There are no sprays to refill and no recurring costs for cleaning supplies.</p>
+                        <p class="mt-6 text-gray-600 leading-relaxed font-medium">No. ClairLite™ is a pure hardware solution. There are no ongoing costs, no expensive filters to change, and no chemical sprays to refill. It is a one-time purchase for long-term protection.</p>
                     </details>
                 </div>
             </div>
         </section>
 
         <!-- FOOTER -->
-        <footer class="bg-brand-footer text-white/50 py-16 px-6 text-center">
-            <img src="images/clearlite-logo.svg" alt="Logo" class="h-6 mx-auto mb-10 logo-light">
+        <footer class="bg-brand-footer text-white/50 py-20 px-6 text-center">
+            <img src="images/clearlite-logo.svg" alt="ClairLite™ Footer Logo" class="h-8 mx-auto mb-12 logo-light">
             
-            <nav class="flex flex-wrap justify-center gap-6 mb-12 text-[10px] font-bold uppercase tracking-widest text-white/80">
-                <button onclick="openModal('terms')" class="hover:text-white transition">Terms of Service</button>
-                <button onclick="openModal('privacy')" class="hover:text-white transition">Privacy Policy</button>
-                <button onclick="openModal('shipping')" class="hover:text-white transition">Shipping</button>
-                <button onclick="openModal('returns')" class="hover:text-white transition">Refunds</button>
-                <button onclick="openModal('contact')" class="hover:text-white transition">Contact</button>
+            <nav class="flex flex-wrap justify-center gap-x-12 gap-y-6 mb-16 text-[11px] font-black uppercase tracking-[0.25em] text-white/80">
+                <button onclick="openModal('terms')" class="hover:text-white transition decoration-brand-blue/40 hover:underline underline-offset-8">Terms of Service</button>
+                <button onclick="openModal('privacy')" class="hover:text-white transition decoration-brand-blue/40 hover:underline underline-offset-8">Privacy Policy</button>
+                <button onclick="openModal('shipping')" class="hover:text-white transition decoration-brand-blue/40 hover:underline underline-offset-8">Shipping Hubs</button>
+                <button onclick="openModal('returns')" class="hover:text-white transition decoration-brand-blue/40 hover:underline underline-offset-8">Return Policy</button>
+                <button onclick="openModal('contact')" class="hover:text-white transition decoration-brand-blue/40 hover:underline underline-offset-8">Support Center</button>
             </nav>
 
-            <div class="max-w-4xl mx-auto space-y-4 opacity-40 text-[9px] leading-relaxed">
-                <p><strong>Safety Disclaimer:</strong> Always follow safety instructions. Do not look directly at the light while active. ClairLite™ is a sanitization device intended for household surface disinfection.</p>
-                <p>© 2026 ClairLite™ Global Operations. Authorized Distributor. 18627 Brookhurst St #1300 Fountain Valley CA 92708.</p>
+            <div class="max-w-5xl mx-auto space-y-6 opacity-40 text-[10px] leading-relaxed font-medium px-4">
+                <p><strong>Safety Notice:</strong> Follow all safety guidelines. Do not expose eyes or skin to UV-C light. ClairLite™ is an electronic sanitization device intended for domestic surface treatment only.</p>
+                <p>© 2026 ClairLite™ Global Operations. Authorized Direct Distributor. 18627 Brookhurst St #1300 Fountain Valley CA 92708.</p>
             </div>
         </footer>
 
-        <!-- MODAL -->
-        <div id="info-modal" class="fixed inset-0 bg-brand-footer/95 z-[100] hidden items-center justify-center p-4 backdrop-blur-md">
-            <div class="bg-white rounded-[2rem] w-full max-w-4xl max-h-[85vh] flex flex-col relative animate-fade-in-up">
-                <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-300 hover:text-brand-blue p-2">
+        <!-- GLOBAL MODAL SYSTEM -->
+        <div id="info-modal" class="fixed inset-0 bg-brand-footer/98 z-[100] hidden items-center justify-center p-4 backdrop-blur-xl transition-all">
+            <div class="bg-white rounded-[2.5rem] w-full max-w-4xl max-h-[85vh] flex flex-col relative shadow-2xl animate-fade-in-up">
+                <button onclick="closeModal()" class="absolute top-8 right-8 text-gray-300 hover:text-brand-blue p-2 transition-colors">
                     <i class="fas fa-times text-2xl"></i>
                 </button>
-                <div id="modal-content" class="p-8 md:p-12 overflow-y-auto text-sm text-gray-700 leading-relaxed modal-content-text">
-                    <!-- Detailed Legal Content Injected Here -->
+                <div id="modal-content" class="p-10 md:p-16 overflow-y-auto modal-content-text">
+                    <!-- Dynamic Legal Content -->
                 </div>
-                <div class="p-6 bg-brand-gray/30 border-t border-gray-100 flex justify-end rounded-b-[2rem]">
-                    <button onclick="closeModal()" class="bg-brand-blue text-white px-8 py-3 rounded-xl font-bold uppercase tracking-widest text-xs hover:opacity-90 transition-all">Close</button>
+                <div class="p-8 bg-brand-gray/30 border-t border-gray-100 flex justify-end rounded-b-[2.5rem]">
+                    <button onclick="closeModal()" class="bg-brand-blue text-white px-12 py-4 rounded-2xl font-black uppercase tracking-widest text-[11px] hover:scale-105 active:scale-95 transition-all shadow-lg">Close Document</button>
                 </div>
             </div>
         </div>
@@ -359,98 +388,93 @@
 
     <!-- SCRIPTS -->
     <script>
-        // Data Atual
+        // Real-time Date Update
         (function() {
             const d = new Date();
             const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
             document.getElementById('current-date').innerText = months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
         })();
 
-        // Scroll Suave
+        // Interaction Logic
         function scrollToSelector() {
             document.getElementById('cta-options').scrollIntoView({ behavior: 'smooth' });
         }
 
-        // Modais Populated with provided data
+        // Professional Policy Data
         const modalData = {
             'terms': `
-                <h2>Terms & Conditions</h2>
-                <p>Dear valued customer, please read these Terms of Service carefully before using any feature of https://get-clairlite.com/ or purchasing any products.</p>
+                <h2>Terms of Service</h2>
+                <p>Dear valued customer, please read these Terms carefully before using https://get-clairlite.com/ or purchasing our products.</p>
                 <h3>Who We Are</h3>
-                <p><strong>ClairLite</strong> is a brand operated by <strong>UAB Rara Digital</strong>, Lithuanian company No. 306641699, address at Gedimino pr. 20, LT-01103, Vilnius, Lithuania.</p>
+                <p><strong>ClairLite™</strong> is a brand operated by <strong>UAB Rara Digital</strong>, Lithuanian company registration No. 306641699, located at Gedimino pr. 20, LT-01103, Vilnius, Lithuania.</p>
                 <h3>Our Products</h3>
-                <p>Products are for personal use only. Not medical devices. Manufactured in China by licensed facilities complying with US/EU safety standards.</p>
-                <h3>Delivery</h3>
-                <p>Processing: 1-3 business days. Arrival: 5-20 calendar days. Reported issues after 30 days will be handled by support.</p>
-                <h3>Returns & Refunds</h3>
-                <p>30-day term from delivery date. Contact support@get-clairlite.com for return authorization. Customer covers return shipping unless item is defective.</p>
-                <h3>Warranty</h3>
-                <p>Standard 2-year warranty for manufacturing defects. Does not cover misuse or mechanical damage.</p>
-                <h3>Pricing & Taxes</h3>
-                <p>Prices include taxes but import duties/VAT may apply depending on your country of residence.</p>
+                <p>Our UV-C devices are designed for domestic use only and are not medical devices. They should never be used as a substitute for professional medical treatment.</p>
+                <h3>Safety Compliance</h3>
+                <p>Manufactured by licensed facilities meeting US and EU standards. Users must strictly follow operating instructions regarding room vacancy during operation.</p>
+                <h3>Pricing & Local Hubs</h3>
+                <p>Final prices include standard taxes. Regional import duties may apply depending on your delivery hub location.</p>
             `,
             'privacy': `
-                <h2>Privacy Policy</h2>
-                <p>We take precautions to protect your personal information in accordance with GDPR requirements.</p>
-                <h3>Data Collection</h3>
+                <h2>Privacy & Data Protection</h2>
+                <p>We implement industry-standard encryption to protect your information in full compliance with GDPR.</p>
+                <h3>Information Use</h3>
                 <ul>
-                    <li><strong>Purchases:</strong> Name, address, phone, email, payment info (Kept for 1 year).</li>
-                    <li><strong>Security:</strong> IP address, device ID, logs (Kept for 1 month).</li>
-                    <li><strong>Inquiries:</strong> Correspondence history (Kept for 10 years).</li>
+                    <li><strong>Transactional Data:</strong> Payment and shipping details (Kept for 12 months post-purchase).</li>
+                    <li><strong>Technical Logs:</strong> IP address and device verification (Kept for 30 days).</li>
+                    <li><strong>Communication:</strong> Support history (Kept for 10 years for quality assurance).</li>
                 </ul>
-                <h3>Sharing Info</h3>
-                <p>We share data with financial institutions, IT service providers (Shopify), logistics partners, and analytical tools (Google Analytics) purely for service fulfillment.</p>
-                <h3>Your Rights</h3>
-                <p>You have the right to access, correct, delete, or restrict the processing of your data. Contact support for identity verification.</p>
-                <h3>Cookies</h3>
-                <p>We use essential cookies (CloudFlare, Laravel) and targeting cookies to improve site performance.</p>
+                <h3>Sharing & Third Parties</h3>
+                <p>Data is only shared with essential partners: Shopify (Infrastructure), Google (Analytics), and Local Hubs (Logistics).</p>
             `,
             'shipping': `
-                <h2>Shipping & Delivery</h2>
-                <h3>Processing</h3>
-                <p>Most items are dispatched within 12 hours. Average delivery time is 5-12 business days. Please allow up to 30 days for unexpected delays.</p>
-                <h3>Tracking</h3>
-                <p>You will receive a tracking ID via email. Please allow 1-3 business days for tracking info to update.</p>
-                <h3>Worldwide Shipping</h3>
-                <p>We ship globally. Buyers are responsible for providing correct addresses. We are not responsible for lost/stolen packages after delivery confirmation.</p>
+                <h2>Global Shipping Hubs</h2>
+                <h3>Processing Timelines</h3>
+                <p>Standard dispatch within 12-24 hours. Global delivery typically takes 5-12 business days via localized shipping routes.</p>
+                <h3>Regional Logistics</h3>
+                <p>We utilize dedicated hubs in the USA, UK, and European regions to ensure minimum transit times and customs efficiency.</p>
+                <h3>Tracking Service</h3>
+                <p>A unique ID is sent via email within 48 hours of your order. Please monitor this for real-time status updates.</p>
             `,
             'returns': `
-                <h2>Returns & Cancellation</h2>
-                <h3>Cancellations</h3>
-                <p>You have 12 hours after purchase to cancel your order if it has not yet been shipped.</p>
-                <h3>Refund Eligibility</h3>
-                <p>Products must be brand new and in original packaging. Contact support with photos to initiate a return within 30 days.</p>
-                <h3>Refund Process</h3>
-                <p>Once received at our hub (USA, Germany, France, UK, or Lithuania), refunds take 5-7 days to issue and up to 20 days to appear in your bank.</p>
+                <h2>Return & Refund Policy</h2>
+                <h3>30-Day Evaluation</h3>
+                <p>If your ClairLite™ device does not meet your sanitization expectations, you are eligible for a full refund within 30 days of physical possession.</p>
+                <h3>Return Process</h3>
+                <ul>
+                    <li>Contact support@get-clairlite.com to initiate.</li>
+                    <li>Provide your unique Order ID and clear photos of the device state.</li>
+                    <li>Items must be in original, undamaged packaging.</li>
+                </ul>
+                <h3>Refund Credits</h3>
+                <p>Refunds are issued to the original payment method within 7-14 business days after inspection at our return hub.</p>
             `,
             'contact': `
-                <h2>Contact Us</h2>
-                <p>Need help? Our team is ready to assist you with any questions about your order or our sanitization technology.</p>
-                <div class="bg-brand-gray/20 p-6 rounded-2xl border border-brand-blue/10">
-                    <p><strong>Email:</strong> support@get-clairlite.com</p>
-                    <p><strong>Phone:</strong> +1 (231) 525-4420</p>
-                    <p><strong>Business:</strong> UAB Rara Digital</p>
-                    <p><strong>Address:</strong> Gedimino pr. 20, LT-01103, Vilnius, Lithuania</p>
+                <h2>Global Support Center</h2>
+                <p>Our dedicated team is available to assist with technical queries or order status 24/7 via email.</p>
+                <div class="bg-brand-gray/20 p-8 rounded-[2rem] border border-brand-blue/10 space-y-4">
+                    <p><strong>Primary Support:</strong> support@get-clairlite.com</p>
+                    <p><strong>Global Phone:</strong> +1 (231) 525-4420</p>
+                    <p><strong>European HQ:</strong> UAB Rara Digital, Vilnius, Lithuania</p>
                 </div>
             `
         };
 
         function openModal(type) {
-            document.getElementById('modal-content').innerHTML = modalData[type];
-            const m = document.getElementById('info-modal');
-            m.classList.remove('hidden');
-            m.classList.add('flex');
+            const modal = document.getElementById('info-modal');
+            document.getElementById('modal-content').innerHTML = modalData[type] || 'Content not found.';
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
             document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
-            const m = document.getElementById('info-modal');
-            m.classList.add('hidden');
-            m.classList.remove('flex');
+            const modal = document.getElementById('info-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
             document.body.style.overflow = '';
         }
 
-        window.onclick = function(e) { if (e.target.id === 'info-modal') closeModal(); };
+        window.onclick = (e) => { if (e.target.id === 'info-modal') closeModal(); };
     </script>
 </body>
 </html>
